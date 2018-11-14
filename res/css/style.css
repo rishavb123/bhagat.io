@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    margin-bottom: 100vh;
+}
+
 h1,
 h2,
 h3 {
