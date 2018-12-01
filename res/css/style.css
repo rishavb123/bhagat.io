@@ -51,7 +51,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
@@ -83,4 +83,8 @@ header {
 
 .social-image {
     width: 10vh;
+}
+
+#about-me-txt {
+    text-align: center;
 }
