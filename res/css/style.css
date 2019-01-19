@@ -37,12 +37,8 @@ h2:after {
 
 /*Header*/
 
-.nav {
-    float: right;
-}
-
-.nav>* {
-    z-index: 99;
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 header {
@@ -98,7 +94,7 @@ header {
 /* About me */
 
 #about-me {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), black, black), url(../imgs/header-background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), black, black), url(../imgs/header-background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
