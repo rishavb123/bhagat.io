@@ -39,6 +39,15 @@ h2:after {
 
 nav {
     background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 2s ease-in;
+}
+
+.fixed-top {
+    opacity: 0;
+}
+
+.load {
+    opacity: 1;
 }
 
 header {
@@ -100,7 +109,7 @@ header {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #00ff00;
-    padding-bottom: 50vh;
+    padding-bottom: 500vh;
 }
 
 #about-me-txt {

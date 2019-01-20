@@ -6,14 +6,28 @@ function headerImageRotate(a) {
 }
 
 $('#about-me').waypoint(direction => {
-    console.log(direction);
-    if (direction === "down")
+    if (direction === "down") {
         $('nav').addClass("fixed-top");
-    else
+        $('nav').addClass("load");
+    } else {
         $('nav').removeClass("fixed-top");
+        $('nav').removeClass("load");
+    }
 }, {
     offset: "25%"
 });
+
+const sections = document.getElementsByClassName("section");
+for (let i in sections) {
+    const section = sections[i];
+    $("#" + section.id).waypoint(direction => {
+        $(".nav-link").removeClass("active");
+        if (direction == "up")
+            $("#nav-" + sections[i - 1].id).addClass("active");
+        else
+            $("#nav-" + section.id).addClass("active");
+    });
+}
 
 new SmoothScroll('a[href*="#"]', {
     easing: "easeOutQuint",
