@@ -9,6 +9,9 @@
     -ms-user-select: none;
 }
 
+
+/* src: url(../fonts/Font-Name/Font-Name.woff) format("woff"), url(../fonts/Font-Name/Font-Name.woff2) format("woff2"), url(../fonts/Font-Name/Font-Name.ttf) format("ttf"), url(../fonts/Font-Name/Font-Name.svg) format("svg"), url(../fonts/Font-Name/Font-Name.otf) format("otf"), url(../fonts/Font-Name/Font-Name.eot) format("eot"); */
+
 @font-face {
     font-family: 'Nightmare Codehack';
     src: url(../fonts/Nightmare-Codehack/Nightmare-Codehack.woff) format("woff"), url(../fonts/Nightmare-Codehack/Nightmare-Codehack.woff2) format("woff2"), url(../fonts/Nightmare-Codehack/Nightmare-Codehack.ttf) format("ttf"), url(../fonts/Nightmare-Codehack/Nightmare-Codehack.svg) format("svg"), url(../fonts/Nightmare-Codehack/Nightmare-Codehack.otf) format("otf"), url(../fonts/Nightmare-Codehack/Nightmare-Codehack.eot) format("eot");
