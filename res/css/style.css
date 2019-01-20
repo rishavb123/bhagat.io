@@ -46,7 +46,7 @@ h3 {
 
 h1 {
     color: white;
-    font-family: 'Digital Tech';
+    font-family: 'Digital Tech', 'Lato';
     text-align: center;
 }
 
@@ -80,11 +80,6 @@ p {
 
 /*Header*/
 
-nav {
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: opacity 2s ease-in;
-}
-
 #brand-logo {
     background-color: #222244;
     border-radius: 100%;
@@ -99,11 +94,7 @@ nav {
 }
 
 .fixed-top {
-    opacity: 0;
-}
-
-.load {
-    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 header {

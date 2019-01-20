@@ -5,13 +5,16 @@ function headerImageRotate(a) {
     $('#header-img').css('transform', 'rotate(' + theta + 'deg)');
 }
 
-$('#about-me').waypoint(direction => {
+$('.bring-in-sticky-nav').waypoint(direction => {
     if (direction === "down") {
+        $('nav').css('display', "none");
         $('nav').addClass("fixed-top");
-        $('nav').addClass("load");
+        $('nav').fadeIn();
     } else {
-        $('nav').removeClass("fixed-top");
-        $('nav').removeClass("load");
+        $('nav').fadeOut("normal", () => {
+            $('nav').removeClass("fixed-top");
+            $('nav').css('display', '');
+        });
     }
 }, {
     offset: "25%"
@@ -21,6 +24,7 @@ const sections = document.getElementsByClassName("section");
 for (let i in sections) {
     const section = sections[i];
     $("#" + section.id).waypoint(direction => {
+        console.log(section.id + " " + direction)
         $(".nav-link").removeClass("active");
         if (direction == "up")
             $("#nav-" + sections[i - 1].id).addClass("active");
@@ -36,3 +40,5 @@ new SmoothScroll('a[href*="#"]', {
     updateURL: false,
     popstate: true
 });
+
+new Rellax('.rellax');
