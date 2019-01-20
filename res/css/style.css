@@ -1,6 +1,37 @@
 * {
     margin: 0;
     padding: 0;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+@font-face {
+    font-family: 'Nightmare Codehack';
+    src: url(../fonts/Nightmare-Codehack/Nightmare-Codehack.woff) format("woff"), url(../fonts/Nightmare-Codehack/Nightmare-Codehack.woff2) format("woff2"), url(../fonts/Nightmare-Codehack/Nightmare-Codehack.ttf) format("ttf"), url(../fonts/Nightmare-Codehack/Nightmare-Codehack.svg) format("svg"), url(../fonts/Nightmare-Codehack/Nightmare-Codehack.otf) format("otf"), url(../fonts/Nightmare-Codehack/Nightmare-Codehack.eot) format("eot");
+}
+
+@font-face {
+    font-family: 'Trench Thin';
+    src: url(../fonts/Trench-Thin/Trench-Thin.woff) format("woff"), url(../fonts/Trench-Thin/Trench-Thin.woff2) format("woff2"), url(../fonts/Trench-Thin/Trench-Thin.ttf) format("ttf"), url(../fonts/Trench-Thin/Trench-Thin.svg) format("svg"), url(../fonts/Trench-Thin/Trench-Thin.otf) format("otf"), url(../fonts/Trench-Thin/Trench-Thin.eot) format("eot");
+}
+
+@font-face {
+    font-family: 'Time Burner';
+    src: url(../fonts/Time-Burner/Time-Burner.woff) format("woff"), url(../fonts/Time-Burner/Time-Burner.woff2) format("woff2"), url(../fonts/Time-Burner/Time-Burner.ttf) format("ttf"), url(../fonts/Time-Burner/Time-Burner.svg) format("svg"), url(../fonts/Time-Burner/Time-Burner.otf) format("otf"), url(../fonts/Time-Burner/Time-Burner.eot) format("eot");
+}
+
+@font-face {
+    font-family: 'Hacked';
+    src: url(../fonts/Hacked/Hacked.woff) format("woff"), url(../fonts/Hacked/Hacked.woff2) format("woff2"), url(../fonts/Hacked/Hacked.ttf) format("ttf"), url(../fonts/Hacked/Hacked.svg) format("svg"), url(../fonts/Hacked/Hacked.otf) format("otf"), url(../fonts/Hacked/Hacked.eot) format("eot");
+}
+
+@font-face {
+    font-family: 'Digital Tech';
+    src: url(../fonts/Digital-Tech/Digital-Tech.woff) format("woff"), url(../fonts/Digital-Tech/Digital-Tech.woff2) format("woff2"), url(../fonts/Digital-Tech/Digital-Tech.ttf) format("ttf"), url(../fonts/Digital-Tech/Digital-Tech.svg) format("svg"), url(../fonts/Digital-Tech/Digital-Tech.otf) format("otf"), url(../fonts/Digital-Tech/Digital-Tech.eot) format("eot");
 }
 
 h1,
@@ -12,16 +43,17 @@ h3 {
 
 h1 {
     color: white;
-    font-family: 'Lato', 'Arial', sans-serif;
+    font-family: 'Digital Tech';
     text-align: center;
 }
 
 h2 {
     color: red;
-    font-family: 'Sofia';
+    font-family: 'Nightmare Codehack';
     text-align: center;
     padding-top: 5%;
     margin-bottom: 5%;
+    font-size: 500%;
 }
 
 h2:after {
@@ -34,12 +66,33 @@ h2:after {
     margin-top: 4vh;
 }
 
+p {
+    text-align: center;
+    font-family: 'Time Burner';
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 120%;
+}
+
 
 /*Header*/
 
 nav {
     background-color: rgba(0, 0, 0, 0.7);
     transition: opacity 2s ease-in;
+}
+
+#brand-logo {
+    background-color: #222244;
+    border-radius: 100%;
+    padding: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.nav-link {
+    font-family: 'Hacked';
+    font-size: 120%;
 }
 
 .fixed-top {
@@ -74,7 +127,7 @@ header {
     min-width: 150px;
     height: auto;
     border-radius: 50%;
-    margin-top: -3vh;
+    margin-top: -10vh;
     transition: 2s border-radius;
 }
 
@@ -110,8 +163,4 @@ header {
     background-attachment: fixed;
     color: #00ff00;
     padding-bottom: 500vh;
-}
-
-#about-me-txt {
-    text-align: center;
 }
