@@ -5,6 +5,17 @@ function headerImageRotate(a) {
     $('#header-img').css('transform', 'rotate(' + theta + 'deg)');
 }
 
+function copy(str) {
+    const el = document.createElement('textarea');
+    el.value = str;
+    el.style.display = "none";
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    alert("Copied " + str);
+};
+
 $('.bring-in-sticky-nav').waypoint(direction => {
     if (direction === "down") {
         $('nav').css('display', "none");
@@ -24,7 +35,6 @@ const sections = document.getElementsByClassName("section");
 for (let i in sections) {
     const section = sections[i];
     $("#" + section.id).waypoint(direction => {
-        console.log(section.id + " " + direction)
         $(".nav-link").removeClass("active");
         if (direction == "up")
             $("#nav-" + sections[i - 1].id).addClass("active");
