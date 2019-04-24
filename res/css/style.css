@@ -96,6 +96,14 @@ h2:after {
     padding-bottom: 1%;
 }
 
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
 
 /*Header*/
 
@@ -202,9 +210,28 @@ header {
     filter: opacity(65%);
 }
 
+#project-holder {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+#project-holder button {
+    background-color: blue;
+    position: absolute;
+    height: 50vh;
+}
+
+#leftBtn {
+    left: 0;
+}
+
+#rightBtn {
+    right:0;
+}
+
 #full-project-list {
     display: flex;
-    margin-top: 10%;
     margin-left: 10%;
     width: 80%;
     overflow-x: scroll;
