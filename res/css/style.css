@@ -16,6 +16,7 @@ html {
 
 body {
     min-height: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -191,10 +192,6 @@ header {
 
 /* Projects */
 
-#projects {
-    padding-bottom: 500vh;
-}
-
 .projects-slides {
     margin-left: 20%;
     margin-right: 20%;
@@ -203,4 +200,32 @@ header {
 
 .project-image {
     filter: opacity(65%);
+}
+
+#full-project-list {
+    display: flex;
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 80%;
+    overflow-x: scroll;
+}
+
+.project {
+    width: 30vw;
+    margin: 2%;
+    min-width: 260px;
+    background-color: black;
+    color: white;
+    transition: font-size 1s, color 1s;
+}
+
+.project:hover {
+    background-color: rgb(83, 83, 83);
+    font-size: 108%;
+    color: #ff0000;
+}
+
+/* Pictures */
+#pictures {
+    padding-bottom: 20%;
 }
