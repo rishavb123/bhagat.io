@@ -17,7 +17,7 @@ function copy(str) {
 };
 
 let pixels = 0;
-let projects = document.getElementById("full-project-list");
+let projects_list = document.getElementById("full-project-list");
 
 function scrollProjects(num) {
     let t = 0;
@@ -27,7 +27,7 @@ function scrollProjects(num) {
             pixels += 2;
         else
             pixels -= 2;
-        projects.scroll(pixels, 0);
+        projects_list.scroll(pixels, 0);
         if(pixels - origPixels == num || pixels - origPixels == num + 1)
             clearInterval(interval);
         t++;
@@ -36,8 +36,8 @@ function scrollProjects(num) {
     });
 }
 
-projects.onscroll = () => {
-    pixels = projects.scrollLeft;
+projects_list.onscroll = () => {
+    pixels = projects_list.scrollLeft;
 }
 
 document.getElementById("leftBtn").onclick = () => {
@@ -84,3 +84,7 @@ new SmoothScroll('a[href*="#"]', {
 });
 
 new Rellax('.rellax');
+
+const source = $("#projects-template")[0].innerHTML;
+const template = Handlebars.compile(source);
+$("#full-project-list").append(template(projects));
