@@ -1,5 +1,34 @@
 let projects = [
     {
+        name: "GAN Colorify Me",
+        image_file: "GANColorifyMe.png",
+        language: "Python",
+        description: "Deep Convolutional Generative Adversarial Networks trained on a dataset of images of my face to generate gray 28x28 images of my face. Then, this image is send into another network (which first runs convolution and then deconvolution) to predict the colors of the image.",
+        links: {
+            Source: "https://github.com/rishavb123/GANColorifyMe"
+        }
+    },
+    {
+        name: "COVID-19 Data Analysis",
+        image_file: "COVID_Graph.png",
+        language: "Python",
+        description: "Analysis of COVID-19 data collected by John Hopkins using python. Created many different models, including Markov Chains, Recursive LRC Circuits, Recurrent Neural Networks, Logistic Models, etc. Wrote a report based on the finding of the data analysis of growth rates, derivatives, etc.",
+        links: {
+            Source: "https://github.com/rishavb123/COVID-19-data-analysis",
+            Report: "https://github.com/rishavb123/COVID-19-data-analysis/blob/master/readme/main.pdf"
+        }
+
+    },
+    {
+        name: "Deep Q Learning Library",
+        image_file: "DeepQLearningLibrary.png",
+        language: "Python",
+        description: "This is a deep q learning library built to work with a custom environment system I created. To apply it to gym environments I created a wrapper to convert a gym environment into my environment library.",
+        links: {
+            Source: "https://github.com/rishavb123/DeepQLearningLibrary"
+        }
+    },
+    {
         name: "Neural Network",
         image_file: "NeuralNetwork.jpg",
         language: "Java",
