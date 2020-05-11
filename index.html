@@ -93,6 +93,10 @@
                 <img src='./res/imgs/belts.png' />
                 <p class='site-text'>I have been doing karate since I was 7 years old. In my time here, I have not only earned a second degree black belt, but also have become a part time instructor here at <a href="https://mpama.com">MPAMA</a>. I recently began doing training in jui-jitsu and mma, extending beyond the taekwando I have been doing.</p>
             </div>
+
+            <!-- <video width=800 height=600 controls autoplay>
+                <source src='./video_May 11 2020 16_57_07 GMT.webm' type='video/webm'>
+            </video> -->
         </div>
 
     </div>
@@ -156,11 +160,9 @@
 
     <div class='overlay'>
         <canvas class='overlay-canvas'></canvas>
-        <video style="display: none" muted>
-            <!-- <source src='https://bhagat.io/res/vids/karate_overlay_optimized.webm' type='video/webm'> -->
-            <!-- <source src='https://bhagat.io/res/vids/karate_overlay_optimized.mp4' type='video/mp4'> -->
-            <!-- <source src='./res/vids/karate_overlay_optimized.webm' type='video/webm'> -->
-            <source src='./res/vids/karate_overlay_optimized_2.mp4' type='video/mp4'>
+        <video id="overlay_video" style="display: none" muted>
+            <source src='./local/res/vids/karate_overlay_edited.webm' type='video/webm'>
+            <source src='http://d1cj442j86a9on.cloudfront.net/karate_overlay.webm' type='video/webm'>
         </video>
     </div>    
 
