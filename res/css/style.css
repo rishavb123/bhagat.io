@@ -8,6 +8,7 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     /* border: 1px solid red; */
+    z-index: 10;
 }
 
 html {
@@ -77,6 +78,25 @@ h2:after {
     width: 20vw;
     margin: 0 auto;
     margin-top: 4vh;
+}
+
+h3 {
+    color: red;
+    font-family: 'Trench Thin';
+    text-align: center;
+    padding-top: 5%;
+    margin-bottom: 5%;
+    font-size: 300%;
+}
+
+h3:after {
+    display: block;
+    height: 2px;
+    background-color: #383838;
+    content: " ";
+    width: 12vw;
+    margin: 0 auto;
+    margin-top: 2vh;
 }
 
 .site-text {
@@ -197,6 +217,19 @@ header {
     color: #00ff00;
 }
 
+#karate-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    color: white;
+}
+
+#karate-description img {
+    width: 15%;
+    z-index: 8;
+}
+
 
 /* Projects */
 
@@ -264,5 +297,11 @@ header {
     pointer-events: none;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 9;
+}
+
+.overlay-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

@@ -1,3 +1,3 @@
-$.getJSON('https://ipapi.co/json/', function(data) {
-    // console.log(data);
-});
+// $.getJSON('https://ipapi.co/json/', function(data) {
+//     // console.log(data);
+// });
