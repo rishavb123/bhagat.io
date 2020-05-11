@@ -1,6 +1,7 @@
 const video = document.getElementsByTagName("video")[0];
 
-const overlay = $('.overlay-canvas')[0]
+const _overlay = $('.overlay-canvas');
+const overlay = _overlay[0];
 const output = overlay.getContext('2d');
 
 let interval;
@@ -36,13 +37,24 @@ function processFrame() {
 
     output.putImageData(image, 0, 0);
 }
-console.log('hello');
 
-video.play();
+$('#karate').waypoint(direction => {    
+    if (direction === "down") {
+        video.play();
+        _overlay.fadeIn(1000);
+
+    } else {
+        clearInterval(interval);
+        video.pause();
+        _overlay.fadeOut(2000);
+    }
+}, {
+    offset: "100%"
+});
 
 video.addEventListener('play', function() {
     clearInterval(interval);
-    interval = setInterval(processFrame, 40)
+    interval = setInterval(processFrame, 40);
 }, false);
 
 video.onended = () => video.play();
