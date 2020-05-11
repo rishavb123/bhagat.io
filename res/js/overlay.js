@@ -38,7 +38,8 @@ function processFrame() {
     output.putImageData(image, 0, 0);
 }
 
-$('#karate').waypoint(direction => {    
+$('#karate').waypoint(direction => { 
+    console.log(direction);   
     if (direction === "down") {
         video.play();
         _overlay.fadeIn(1000);
