@@ -40,7 +40,7 @@ if(!isTouchDevice) {
             _overlay.fadeOut(2000);
         }
     }, {
-        offset: "100%"
+        offset: "75%"
     });
 }
 
