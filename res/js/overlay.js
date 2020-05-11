@@ -18,6 +18,7 @@ addEventListener('resize', function() {
 })
 
 function processFrame() {
+    console.log('processing frame');
     output.clearRect(0, 0, overlay.width, overlay.height);
 
     let x = 0,
@@ -37,6 +38,19 @@ function processFrame() {
 
     output.putImageData(image, 0, 0);
 }
+
+// const myMediaSource = new MediaSource();
+// mediaSource.addEventListener('sourceopen', () => console.log("sJKSDL"));
+// const url = URL.createObjectURL(myMediaSource);
+// video.src = url;
+// const videoSourceBuffer = myMediaSource.addSourceBuffer('video/mp4; codecs="avc1.64001e"');
+
+// fetch("https://bhagat.io/res/vids/karate_overlay_optimized.webm").then(function(response) {
+//     return response.arrayBuffer();
+// }).then(function(videoData) {
+//     videoSourceBuffer.appendBuffer(videoData);
+// });
+
 
 $('#karate').waypoint(direction => { 
     console.log(direction);   
