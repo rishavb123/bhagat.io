@@ -19,11 +19,6 @@ addEventListener('resize', function() {
 function processFrame() {
     output.clearRect(0, 0, overlay.width, overlay.height);
 
-    // let x = 0,
-    //     y = overlay.height / 4,
-    //     w = overlay.width / 2,
-    //     h = overlay.height / 2;
-
     let x = 0,
         y = 0,
         w = overlay.width,
