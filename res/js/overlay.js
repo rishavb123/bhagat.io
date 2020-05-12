@@ -44,7 +44,7 @@ function processFrame() {
 overlay_config = {
     "none": {},
     "karate": {
-        offset: "65%",
+        offset: "55%",
         onenter: () => video.play(),
         onexit: () => video.pause(),
         above: "education"
