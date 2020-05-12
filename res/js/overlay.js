@@ -46,13 +46,29 @@ function processFrame() {
             output.globalAlpha = 0.1;
             output.drawImage(education_img, x, y, w, h);
             break;
-        // default:
-        //     output.globalAlpha = 1;
-        //     output.fillStyle = '#ffffff55';
-        //     output.fillRect(0, 0, mouseX, overlay.height);
-        //     break;
+        case "mtg":
+            output.globalAlpha = 0.35;
+            output.drawImage(gif_canvas, x, y, w, h);
+            break;
     }
 }
+
+let playmat_image = new Image();
+let gif_canvas;
+
+playmat_image.onload = () => {
+    const gif = new SuperGif({
+        gif: playmat_image,
+        progressbar_height: 0,
+        auto_play: true,
+        loop_mode: true,
+        draw_while_loading: true
+    });
+    gif.load();
+    gif_canvas = gif.get_canvas();
+};
+    
+playmat_image.src = 'res/imgs/overlay-images/playmat.gif';
 
 overlay_config = {
     "none": {},
@@ -66,8 +82,12 @@ overlay_config = {
         offset: "40%",
         above: "none"
     },
+    "mtg": {
+        above: "karate",
+        offset: "15%"
+    },
     "projects": {
-        above: "karate"
+        above: "mtg"
     }
 };
 

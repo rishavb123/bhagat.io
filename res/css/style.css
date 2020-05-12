@@ -53,6 +53,7 @@ h2,
 h3 {
     font-weight: 300;
     text-transform: uppercase;
+    position: relative;
 }
 
 h1 {
