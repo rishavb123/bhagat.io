@@ -230,7 +230,7 @@ header {
 }
 
 #education-description div {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -309,8 +309,9 @@ header {
 }
 
 /* Pictures */
-#pictures {
-    padding-bottom: 20%;
+
+.carousel-item img {
+    margin: auto;
 }
 
 /* Overlay */
@@ -327,4 +328,15 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+/* Contact Information */
+
+#contact {
+    padding-bottom: 10%;
+}
+
+.contact-text {
+    color: purple;
+    margin-bottom: 2%;
 }
