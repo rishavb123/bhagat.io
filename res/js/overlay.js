@@ -50,7 +50,7 @@ overlay_config = {
         above: "education"
     },
     "education": {
-        offset: "20%",
+        offset: "40%",
         above: "none"
     }
 };
