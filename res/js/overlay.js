@@ -52,6 +52,9 @@ overlay_config = {
     "education": {
         offset: "40%",
         above: "none"
+    },
+    "projects": {
+        above: "karate"
     }
 };
 
