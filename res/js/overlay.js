@@ -97,7 +97,6 @@ if(!isTouchDevice) {
         let overlay_section_config = overlay_config[overlay_section];
         $(`#${overlay_section}`).waypoint(direction => {
             if(direction == "down") {
-                console.log(overlay_section, overlay_section_config);
                 if(overlay_section_config.onenter)
                     overlay_section_config.onenter();
                 let t = 0;
@@ -110,7 +109,6 @@ if(!isTouchDevice) {
                         overlay_config[overlay_state].onexit();
                     overlay_state = overlay_section;
                     _overlay.fadeIn(1000);
-                    console.log("hi");
                 }, t);
             } else {
                 if(overlay_section_config.onexit)
