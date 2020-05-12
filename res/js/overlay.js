@@ -127,6 +127,8 @@ if(!isTouchDevice) {
             offset: overlay_section_config.offset
         });
     }
+} else {
+    $('.subsection-description img').remove();
 }
 
 video.onended = () => video.play();
