@@ -21,13 +21,21 @@ addEventListener('resize', function() {
     overlay.height = innerHeight;
 })
 
+let mouseX = 0, mouseY = 0;
+const mouseSize = 100;
+
+window.onmousemove = e => {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+}
+
 function processFrame() {
     output.clearRect(0, 0, overlay.width, overlay.height);
 
-    let x = 0,
-        y = 0,
-        w = overlay.width,
-        h = overlay.height;
+    let x = 0;
+    let y = 0;
+    let w = overlay.width;
+    let h = overlay.height;
 
     switch(overlay_state) {
         case "karate":
@@ -38,6 +46,11 @@ function processFrame() {
             output.globalAlpha = 0.1;
             output.drawImage(education_img, x, y, w, h);
             break;
+        // default:
+        //     output.globalAlpha = 1;
+        //     output.fillStyle = '#ffffff55';
+        //     output.fillRect(0, 0, mouseX, overlay.height);
+        //     break;
     }
 }
 
