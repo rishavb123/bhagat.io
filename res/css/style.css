@@ -253,6 +253,10 @@ header {
     z-index: 8;
 }
 
+#mtg-description img {
+    width: 50%;
+}
+
 
 /* Projects */
 
