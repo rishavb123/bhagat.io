@@ -79,7 +79,7 @@ overlay_config = {
         above: "education"
     },
     "education": {
-        offset: "40%",
+        offset: "70%",
         above: "none"
     },
     "mtg": {
