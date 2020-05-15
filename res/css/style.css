@@ -256,6 +256,11 @@ header {
 
 #mtg-description img {
     width: 50%;
+    transition: content 1s;
+}
+
+#mtg-description img:hover {
+    content: url('../imgs/about-me//mtg_covered.png');
 }
 
 
