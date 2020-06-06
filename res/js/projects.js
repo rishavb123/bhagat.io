@@ -29,6 +29,35 @@ let projects = [
         }
     },
     {
+        name: "College Data Analysis",
+        image_file: "CollegeData.png",
+        language: "Python",
+        description: "I applied a neural network that I coded myself (or the option to use a tensorflow model) on a college dataset so that it would predict your chances of making a college from our high school (South Brunswick High School) based on GPA and SAT/ACT. I also used a genetic algorithm to optimize the hyperparameters of the neural network.",
+        links: {
+            Source: "https://github.com/rishavb123/CollegeData"
+        }
+    },
+    {
+        name: "Viking Tutors",
+        image_file: "VikingTutors.png",
+        language: "HTML CSS JS",
+        description: "This is a website for students to access online learning material specific to our school. I created this using firebase as the database and authentication so that only students of our school can watch the videos and only teachers can upload. I have also added zoom integration for live streams and used the youtube api to display videos.",
+        links: {
+            Source: "https://github.com/rishavb123/VikingTutors",
+            Firebase: "https://github.com/rishavb123/VikingTutorsFirebase",
+            View: "https://vikingtutors.org/"
+        }
+    },
+    {
+        name: "Flappy Bird Bot",
+        image_file: "FlappyBirdBot.jpg",
+        language: "Python",
+        description: "I used a genetic algorithm to train a neural network to play my version of the game flappy bird. I trained a variety of different models for many different configurations of the game and stored them into files.",
+        links: {
+            Source: "https://github.com/rishavb123/FlappyBirdBot"
+        }
+    },
+    {
         name: "Neural Network",
         image_file: "NeuralNetwork.jpg",
         language: "Java",
