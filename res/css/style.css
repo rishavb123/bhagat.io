@@ -318,6 +318,25 @@ header {
     color: #ff0000;
 }
 
+/* Desk Setup */
+
+#setup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#setup h2 {
+    margin-bottom: 2%;
+}
+
+#setup-video {
+    width: 65vw;
+    height: auto;
+    border-radius: 100px;
+}
+
 /* Pictures */
 
 .carousel-item img {
