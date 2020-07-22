@@ -333,8 +333,9 @@ header {
 
 #setup-video {
     width: 65vw;
-    height: auto;
+    height: 36vw;
     border-radius: 100px;
+    pointer-events: none;
 }
 
 /* Pictures */
