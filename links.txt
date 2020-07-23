@@ -3,3 +3,16 @@ https://onlinefontconverter.com/
 https://www.fontspace.com/category/robotic
 https://getbootstrap.com/docs/4.0/components/carousel/
 https://www.bootstrapcdn.com/fontawesome/
+
+https://www.google.com/maps/embed?pb=
+    !4v1595507086652
+        !6m8
+            !1m7
+                !1sCAoSLEFGMVFpcE5abnRWN1pGNUtWbXlFTzZZZGJIdF9mSTVkd0psUlZHaVpkWEZY
+            !2m2
+                !1d40.3731189
+                !2d-74.57185439999999
+                !3f152.34365975036957
+                !4f-3.096637252122491
+                !5f0.7820865974627469
+

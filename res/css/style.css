@@ -117,6 +117,14 @@ h3:after {
     padding-bottom: 1%;
 }
 
+i {
+    transition: font-size 1s;
+}
+
+i:hover {
+    font-size: 250%;
+}
+
 ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
