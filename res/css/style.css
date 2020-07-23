@@ -318,7 +318,7 @@ header {
     color: #ff0000;
 }
 
-/* Desk Setup */
+/* Setup */
 
 #setup {
     display: flex;
@@ -336,6 +336,12 @@ header {
     height: 36vw;
     border-radius: 100px;
     pointer-events: none;
+}
+
+#room-map {
+    width: 65vw;
+    height: 36vw;
+    border-radius: 25px;
 }
 
 /* Pictures */
