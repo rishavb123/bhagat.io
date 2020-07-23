@@ -97,7 +97,7 @@ if('ontouchstart' in document.documentElement) {
 
 let player;
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player('youtube-video', {
+  player = new YT.Player('setup-video', {
     events: {
       'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange
