@@ -343,7 +343,7 @@ header {
     width: 65vw;
     height: 36vw;
     border-radius: 25px;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 #room-map {

@@ -90,7 +90,7 @@ const template = Handlebars.compile(source);
 $("#full-project-list").append(template(projects));
 
 if('ontouchstart' in document.documentElement) {
-    $('#setup-video').css('pointer-events', 'auto');
+    // $('#setup-video').css('pointer-events', 'auto');
     $('#setup-video').css('border-radius', '0');
     $('#setup-video').attr("src", "https://www.youtube.com/embed/XuCRpQ7TmHo?rel=0&controls=1")
 }
