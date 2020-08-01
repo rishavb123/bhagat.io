@@ -244,17 +244,23 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
 }
 
-#education-description div img {
+#education-description div div {
+    background-color: black;
+    overflow: hidden;
+}
+
+#education-description div div img {
     width: 100%;
     opacity: 0.5;
-    transition: opacity 1s;
+    transform: scale(1.15);
+    transition: opacity 1s, transform 1s;
 }
 
 #education-description div img:hover {
     opacity: 1;
+    transform: scale(1);
 }
 
 #karate-description img {
