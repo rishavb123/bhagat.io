@@ -74,7 +74,27 @@ let projects = [
         description: "This is java library that can do a lot of math including concepts from statistics, linear algebra, and calculus. It is mostly focused on linear algebra for now since that has to most application, but I will add more to it.",
         links: {
             Source: "https://github.com/rishavb123/NeuralNetwork/tree/master/src/io/bhagat/math",
+            v2: "https://github.com/rishavb123/JMathLib",
             Docs: "https://neuralnetwork.bhagat.io/"
+        }
+    },
+    {
+        name: "Environmental Justice Georgia Tech Website",
+        image_file: "EnvironmentalJusticeWebsite.png",
+        language: "HTML CSS JS",
+        description: "This is a website that I created to raise awareness about the enviornmental injustices occuring around the world and specifically in Atlanta, Georgia. The target audience is Georgia Tech students, but it is available for anyone to view. It uses firebase firestore as the databse to store all the events and programs.",
+        links: {
+            View: "https://envjustice.bhagat.io",
+            Source: "https://github.com/rishavb123/EnvironmentalJusticeGatechWebsite"
+        }
+    },
+    {
+        name: "Global Temperature Data Analysis",
+        image_file: "GlobalTemperatures.png",
+        language: "Python",
+        description: "Using the same framework from the COVID-19 data analysis project to display a dashboard of different views of the global climate data. The analysis shows troubling trends that need to be slowed if we want the Earth to continue to continue to be sustainable.",
+        links : {
+            Source: "https://github.com/rishavb123/GlobalTemperatureDataAnalysis"
         }
     },
     {
