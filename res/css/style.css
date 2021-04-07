@@ -277,6 +277,9 @@ header {
     content: url('../imgs/about-me//mtg_covered.png');
 }
 
+#mtg-description p a {
+    color: rgb(204, 204, 204);
+}
 
 /* Projects */
 
