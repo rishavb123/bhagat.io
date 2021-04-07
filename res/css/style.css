@@ -277,8 +277,9 @@ header {
     content: url('../imgs/about-me//mtg_covered.png');
 }
 
-#mtg-description p a {
+.mtg-deck-link {
     color: rgb(204, 204, 204);
+    text-decoration: underline;
 }
 
 /* Projects */
