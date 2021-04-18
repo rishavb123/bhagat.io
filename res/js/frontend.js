@@ -5,6 +5,14 @@ function headerImageRotate(a) {
     $('#header-img').css('transform', 'rotate(' + theta + 'deg)');
 }
 
+let spinningInterval;
+
+$("#header-img").hover(() => {
+    spinningInterval = setInterval(() => headerImageRotate(theta + 1), Math.floor(Math.random() * 20) + 5);
+}, () => {
+    clearInterval(spinningInterval);
+});
+
 function copy(str) {
     const el = document.createElement('textarea');
     el.value = str;
