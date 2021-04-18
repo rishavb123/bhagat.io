@@ -76,7 +76,7 @@ overlay_config = {
         offset: "55%",
         onenter: () => video.play(),
         onexit: () => video.pause(),
-        above: "education"
+        above: "resume"
     },
     "education": {
         offset: "70%",
@@ -86,8 +86,13 @@ overlay_config = {
         above: "karate",
         offset: "15%"
     },
-    "projects": {
-        above: "mtg"
+    "setup": {
+        above: "mtg",
+        offset: "10%"
+    },
+    "experience": {
+        above: "education",
+        offset: "10%"
     }
 };
 
