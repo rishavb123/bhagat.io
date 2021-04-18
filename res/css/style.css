@@ -325,14 +325,18 @@ header {
     margin: 2%;
     min-width: 260px;
     background-color: black;
-    color: white;
+    color: rgb(184, 184, 184);
     transition: font-size 1s, color 1s;
 }
 
 .project:hover {
     background-color: rgb(83, 83, 83);
     font-size: 108%;
-    color: #ff0000;
+    color: #ffffff;
+}
+
+.card-link {
+    border-color: black;
 }
 
 /* Setup */
