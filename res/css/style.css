@@ -106,6 +106,7 @@ h3:after {
     padding-left: 15%;
     padding-right: 15%;
     font-size: 120%;
+    color: white;
 }
 
 .site-text b {
@@ -229,6 +230,10 @@ header {
 
 #about-me {
     color: #ffffff;
+}
+
+.subsection {
+    padding: 2%;
 }
 
 .subsection-description {
