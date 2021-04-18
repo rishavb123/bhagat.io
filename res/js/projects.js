@@ -1,5 +1,24 @@
 let projects = [
     {
+        name: "Deep Q Learning in Minecraft",
+        image_file: "MineRL.png",
+        language: "Python",
+        description: "Applies the Deep Q Learning algorithm using a convolutional neural network to have an agent learn to fight zombies in a closed minecraft environment. This is done using Microsoft's Project Malmo (to create the environment) and tensorflow/keras to structure the network.",
+        links: {
+            Source: "https://github.com/rishavb123/MineRL",
+            Report: "https://minerl.bhagat.io/"
+        }
+    },
+    {
+        name: "Quantum Physics with Deep Learning",
+        image_file: "QuantumPhysics.jpg",
+        language: "Python",
+        description: "Trains a keras neural network on data of the solved schrodinger's equation. The inputs of this model are samples from the potential from within the infinite asymmetric potential well and the output is samples from the solved wavefunction. The data is collected by solving the schrodinger's equation using a numeric method called the Runge-Kutta method.",
+        links: {
+            Source: "https://colab.research.google.com/github/rishavb123/QuantumPhysicsWithDeepLearning/blob/master/Solving_the_Schrodinger_Equation_with_Deep_Neural_Networks.ipynb"
+        }
+    },
+    {
         name: "GAN Colorify Me",
         image_file: "GANColorifyMe.png",
         language: "Python",
@@ -35,6 +54,15 @@ let projects = [
         description: "I applied a neural network that I coded myself (or the option to use a tensorflow model) on a college dataset so that it would predict your chances of making a college from our high school (South Brunswick High School) based on GPA and SAT/ACT. I also used a genetic algorithm to optimize the hyperparameters of the neural network.",
         links: {
             Source: "https://github.com/rishavb123/CollegeData"
+        }
+    },
+    {
+        name: "OpenCV Utils",
+        image_file: "OpenCV.png",
+        language: "Python",
+        description: "A package created to optimize the workflow of my future computer vision projects. This package setups up cameras, parses command line arguments, streams video, and even creates virtual webcams from the video input you specify (which could be a camera or a video file).",
+        links: {
+            Source: "https://github.com/rishavb123/OpenCVPythonUtils"
         }
     },
     {
