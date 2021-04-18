@@ -8,7 +8,7 @@ function headerImageRotate(a) {
 let spinningInterval;
 
 $("#header-img").hover(() => {
-    spinningInterval = setInterval(() => headerImageRotate(theta + 1), Math.floor(Math.random() * 20) + 5);
+    spinningInterval = setInterval(() => headerImageRotate(theta + 1), Math.floor(Math.random() * 20) + 1);
 }, () => {
     clearInterval(spinningInterval);
 });
