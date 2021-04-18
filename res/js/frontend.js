@@ -77,8 +77,8 @@ for (let i in sections) {
 
 new SmoothScroll('a[href*="#"]', {
     easing: "easeOutQuint",
-    speed: 2000,
-    durationMin: 1000,
+    speed: 500,
+    durationMin: 100,
     updateURL: false,
     popstate: true
 });
