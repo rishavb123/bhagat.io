@@ -412,3 +412,21 @@ header {
 #experience .subsection {
     margin-bottom: 10%;
 }
+
+/* Gaming */
+
+.carousel {
+    background-color: black;
+}
+
+.gaming-image {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.gaming-image:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}

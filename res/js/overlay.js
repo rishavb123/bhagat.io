@@ -72,15 +72,19 @@ playmat_image.src = 'res/imgs/overlay-images/playmat.gif';
 
 overlay_config = {
     "none": {},
+    "education": {
+        offset: "70%",
+        above: "none"
+    },
+    "experience": {
+        above: "education",
+        offset: "10%"
+    },
     "karate": {
         offset: "55%",
         onenter: () => video.play(),
         onexit: () => video.pause(),
-        above: "resume"
-    },
-    "education": {
-        offset: "70%",
-        above: "none"
+        above: "experience"
     },
     "mtg": {
         above: "karate",
@@ -88,10 +92,6 @@ overlay_config = {
     },
     "setup": {
         above: "mtg",
-        offset: "10%"
-    },
-    "experience": {
-        above: "education",
         offset: "10%"
     }
 };
