@@ -39,7 +39,7 @@ function processFrame() {
 
     switch(overlay_state) {
         case "karate":
-            output.globalAlpha = 1;
+            output.globalAlpha = 0.5;
             output.drawImage(video, x, y, w, h);
             break;
         case "education":
@@ -47,7 +47,7 @@ function processFrame() {
             output.drawImage(education_img, x, y, w, h);
             break;
         case "mtg":
-            output.globalAlpha = 0.35;
+            output.globalAlpha = 0.15;
             output.drawImage(gif_canvas, x, y, w, h);
             break;
     }
