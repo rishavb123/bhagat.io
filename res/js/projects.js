@@ -1,15 +1,5 @@
 let projects = [
     {
-        name: "Deep Q Learning in Minecraft",
-        image_file: "MineRL.png",
-        language: "Python",
-        description: "Applies the Deep Q Learning algorithm using a convolutional neural network to have an agent learn to fight zombies in a closed minecraft environment. This is done using Microsoft's Project Malmo (to create the environment) and tensorflow/keras to structure the network.",
-        links: {
-            Source: "https://github.com/rishavb123/MineRL",
-            Report: "https://minerl.bhagat.io/"
-        }
-    },
-    {
         name: "Quantum Physics with Deep Learning",
         image_file: "QuantumPhysics.jpg",
         language: "Python",
@@ -45,6 +35,16 @@ let projects = [
         description: "This is a deep q learning library built to work with a custom environment system I created. To apply it to gym environments I created a wrapper to convert a gym environment into my environment library.",
         links: {
             Source: "https://github.com/rishavb123/DeepQLearningLibrary"
+        }
+    },
+    {
+        name: "Deep Q Learning in Minecraft",
+        image_file: "MineRL.png",
+        language: "Python",
+        description: "Applies the Deep Q Learning algorithm using a convolutional neural network to have an agent learn to fight zombies in a closed minecraft environment. This is done using Microsoft's Project Malmo (to create the environment) and tensorflow/keras to structure the network.",
+        links: {
+            Source: "https://github.com/rishavb123/MineRL",
+            Report: "https://minerl.bhagat.io/"
         }
     },
     {
