@@ -381,6 +381,52 @@ let tech = {
             }
         }
     ],
+    io_hubs: [
+        {
+            name: "Sabrent 10-Port 60W USB 3.0 Hub",
+            type: "USB Hub",
+            label: "10-Port USB Hub",
+            link: "https://www.amazon.com/gp/product/B0797NZFYP/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1",
+            color: "black",
+            specs: {
+                num_ports: 10,
+                num_usb_3_ports: 10,
+                powered: true,
+                other: ["usb only", "individual switches"]
+            }
+        },
+        {
+            name: "Anker 4-Port USB 3.0 Ultra Slim Data Hub",
+            type: "USB Hub",
+            label: "4-Port USB Hub",
+            link: "https://www.amazon.com/gp/product/B00XMD7KPU/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1",
+            color: "black",
+            specs: {
+                num_ports: 4,
+                num_usb_3_ports: 4,
+                powered: false,
+                other: ["usb only"]
+            }
+        },
+        {
+            name: "Falwedi USB C Hub",
+            type: "USB C Hub",
+            label: "9-Port USB C Hub",
+            color: "silver",
+            link: "https://www.amazon.com/gp/product/B00XMD7KPU/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1",
+            specs: {
+                num_ports: 9,
+                num_usb_3_ports: 3,
+                num_usb_c_ports: 2,
+                num_ethernet_ports: 1,
+                num_sd_slots: 1,
+                num_micro_sd_slots: 1,
+                num_hdmi_ports: 1,
+                powered: false,
+                other: ["4K @ 30Hz HDMI"]
+            }
+        }
+    ],
     other_devices: [
         {
             name: "AUKEY FHD Webcam",
