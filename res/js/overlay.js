@@ -38,7 +38,7 @@ function processFrame() {
     let h = overlay.height;
 
     switch(overlay_state) {
-        case "karate":
+        case "martial_arts":
             output.globalAlpha = 0.5;
             output.drawImage(video, x, y, w, h);
             break;
@@ -80,14 +80,14 @@ overlay_config = {
         above: "education",
         offset: "10%"
     },
-    "karate": {
+    "martial_arts": {
         offset: "55%",
         onenter: () => video.play(),
         onexit: () => video.pause(),
         above: "experience"
     },
     "mtg": {
-        above: "karate",
+        above: "martial_arts",
         offset: "15%"
     },
     "setup": {
