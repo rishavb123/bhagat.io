@@ -307,6 +307,7 @@ header {
     width: 70vw;
     height: 51.1vw;
     margin-left: 0;
+    border-radius: 10vw;
 }
 
 .edh-desc {
