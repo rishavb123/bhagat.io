@@ -424,11 +424,12 @@
                     <p class="text edh-desc {{mobile}}">
                         <b class="edh-deck-name">{{name}}</b>
                         <br />
-                        <span class="edh-color-icons-holder">
+                        Colors: <span class="edh-color-icons-holder">
                             {{#each colors}}
                                 <img src="./res/imgs/mtg-color-symbols/{{this}}.png" class="edh-color-img" />
                             {{/each}}
-                        </span>
+                        </span>; 
+                        Mana Value: {{manaValue}}
                         <br />
                         <a href={{url}} class="deck-links">{{url}}</a>
                         <br /> <br />

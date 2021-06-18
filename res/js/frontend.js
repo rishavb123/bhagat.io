@@ -178,7 +178,8 @@ fetch('https://bhagat-api.herokuapp.com/db', {
         id: deck.name.replaceAll(" ", "-"),
         commanderName: deck.commander.name,
         colors: deck.commander.color_identity?.sort(colorsSort),
-        url: deck.url
+        url: deck.url,
+        manaValue: deck.commander.mana_value,
     }));
 
     for (const d of data) {
