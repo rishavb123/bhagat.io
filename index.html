@@ -197,9 +197,9 @@
                 projects. For example, I recently used blender to create a model of most of setup and I used Adobe Premiere and
                 Blender to edit videos for assignments.</p>
             <div class="subsection-description" id="software-description">
-                <img style="width: 20%; margin-right: 13%;" src="./res/imgs/software/blender.png" />
-                <img style="width: 20%; margin-right: 13%;" src="./res/imgs/software/photoshop.png" />
-                <img style="width: 20%;" src="./res/imgs/software/premiere.png" />
+                <img class="mobile-keep" style="width: 20%; margin-right: 13%;" src="./res/imgs/software/blender.png" />
+                <img class="mobile-keep" style="width: 20%; margin-right: 13%;" src="./res/imgs/software/photoshop.png" />
+                <img class="mobile-keep" style="width: 20%;" src="./res/imgs/software/premiere.png" />
             </div>
             <div class="subsection-description" id="software-description">
                 <a style="width: 30%; margin-right: 3%;" href="https://www.blender.org/">
@@ -235,38 +235,40 @@
     
         <div class='subsection' id="mtg">
             <h3>Magic: The Gathering</h3>
-    
+            <p class="site-text">
+                I started playing <a href="https://magic.wizards.com/en" class="deck-links">Magic: The Gathering</a> (MTG) when I was 11
+                years old and have continued to enjoy it as one of my favorite hobbies since. <br><br>
+                I mainly play <a href="https://mtgcommander.net/" class="deck-links">commander</a> (EDH) with friends, but I also enjoy
+                going to events such as sealed and draft. The commander decks that I play are displayed and listed below.
+                
+                <br><br> On <a href="https://magic.wizards.com/en/mtgarena" class="deck-links">MTG Arena</a>, I play draft and
+                occasionally the other formats offered.
+            </p>
             <div class='subsection-description' id="mtg-description">
-                <img src='./res/imgs/about-me/mtg.png' />
-                <p class='site-text'>
-                    I started playing <a href="https://magic.wizards.com/en">Magic: The Gathering</a> (MTG) when I was 11
-                    years old and have continued to enjoy it as one of my favorite hobbies since. <br /><br />
-                    I mainly play <a href="https://mtgcommander.net/">commander</a> (EDH) with friends, but I also enjoy
-                    going to events such as sealed and draft. I also draft commander legends with my friends to get the best
-                    of both worlds. On <a href="https://magic.wizards.com/en/mtgarena">MTG Arena</a>, I play draft and
-                    occasionally the other formats offered.<br /><br />
-                    The commander decks that I play are listed here (with each of the deck lists linked):
-                    <br /><a class="mtg-deck-link" href="https://www.moxfield.com/decks/XMdFc9O33kG_QBtyC6bWNw">Golos,
-                        Tireless Pilgrim</a>: A value-based blink deck with a combo win con.
-                    <br /><a class="mtg-deck-link" href="https://www.moxfield.com/decks/2VsqRfwg8UmELQHuleN-Bg">Araumi, of
-                        the Dead Tide</a>: A reanimation deck but with 3 copies, not 1.
-                    <br /><a class="mtg-deck-link" href="https://www.moxfield.com/decks/7QsxX5LJWkSBHSjaHWitzg">Jodah,
-                        Archmage Eternal</a>: A deck trying to drop game winning 7+ mana spells.
-                    <br /><a class="mtg-deck-link" href="https://www.moxfield.com/decks/PmUCzQpZSkWtiwM6J0mf1Q">Edric,
-                        Spymaster of Trest</a>: Flying men tribal, but you draw all the cards.
-                    <br /><a class="mtg-deck-link" href="https://www.moxfield.com/decks/3Q5YuLlctUSHewTGupyDKw">Tatyova,
-                        Benthic Druid</a>: Play lands, draw cards, repeat, and finally combo.
-                    <br /><a class="mtg-deck-link" href="https://www.moxfield.com/decks/2iILx8x-W0OqAgNXvpGpKg">Kruphix, God
-                        of Horizons</a>: A control deck looking to build up its stored mana.
-                    <br /><a class="mtg-deck-link" href="https://www.moxfield.com/decks/KriCYiXgFkOFsfy3tePpOw">Tuvasa the
-                        Sunlit</a>: An enchantress deck looking to always have 7 cards in hand.
-                    <br /><a class="mtg-deck-link" href="https://www.moxfield.com/decks/o78TtXYkekSrlF4GY_ftjQ">The
-                        Prismatic Bridge</a>: A superfriends deck looking to out value my opponents.
-                    <br /><a class="mtg-deck-link" href="https://www.moxfield.com/decks/ZsxlAwYt9UCsVMNl8j1EJQ">Zedruu the
-                        Greathearted</a>: Play enchantments, donate them, draw cards, repeat.
-                </p>
+                <div id="mtg-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators" id="deck-indicator-template-holder">
+                        
+                    </ol>
+                    <div class="carousel-inner" id="deck-template-holder">
+                    </div>
+                    <a class="carousel-control-prev" data-target="#mtg-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" data-target="#mtg-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
-    
+            <div class='subsection-description' id='mtg-description-2'>
+                <div>
+                    <h4 id="deck-links-title">Deck Links:</h4>
+                    <ul id="deck-links-holder"></ul>
+                </div>
+            </div>
+
+
         </div>
 
         <div id="setup" class="subsection">
@@ -290,7 +292,7 @@
                 I own all the games from the Witcher series, but have only played the third one so far. I am still working on beating it.
             </p>
             <div class="subsection-description">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" width="50%">
+                <div id="carouselExampleIndicators" class="carousel carousel-black slide" data-ride="carousel" width="50%">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -320,7 +322,7 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel" width="50%">
+                <div id="carouselExampleIndicators2" class="carousel carousel-black slide" data-ride="carousel" width="50%">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
@@ -405,6 +407,37 @@
                     </div>
                 </div>
             </div>
+        {{/each}}
+    </template>
+
+    <template id="deck-indicator-template">
+        {{#each this}}
+            <li data-target="#mtg-carousel" data-slide-to="{{index}}" class="edh-indicators {{classes}}"></li>
+        {{/each}}
+    </template>
+
+    <template id="deck-template">
+        {{#each this}}
+            <div class="carousel-item edh-carousel {{classes}}" id={{id}}>
+                <div class="edh-container {{mobile}}">
+                    <img class="edh-img {{mobile}}" src="{{image}}" alt="{{commanderName}}">
+                    <p class="text edh-desc {{mobile}}">
+                        <b>{{name}}</b>
+                        <br />
+                        <a href={{url}} class="deck-links">{{url}}</a>
+                        <br /> <br />
+                        {{{description}}}
+                    </p>
+                </div>
+            </div>
+        {{/each}}
+    </template>
+
+    <template id="deck-links-template">
+        {{#each this}}
+            <li>
+                <a href={{url}} class="deck-links">{{commanderName}}</a>
+            </li>
         {{/each}}
     </template>
 

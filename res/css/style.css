@@ -277,18 +277,47 @@ header {
     width: 15%;
 }
 
-#mtg-description img {
+.edh-carousel #deck-template-holder #mtg-carousel {
+    width: 70vw;
+    background-color: #ffffff00;
+}
+
+.edh-container {
+    display: flex;
+    width: 70vw;
+}
+
+.edh-container.mobile {
+    flex-direction: column;
+}
+
+.edh-img {
+    display: inline-block;
+    width: 21vw;
+    height: 29.4vw;
+    margin-left: 10%;
+    margin-right: 0;
+}
+
+.edh-img.mobile {
+    width: 70vw;
+    height: 51.1vw;
+}
+
+.edh-desc {
+    display: inline-block;
     width: 50%;
-    transition: content 1s;
 }
 
-#mtg-description img:hover {
-    content: url('../imgs/about-me//mtg_covered.png');
+.edh-desc.mobile {
+    width: 100%;
 }
 
-.mtg-deck-link {
+.deck-links {
     color: rgb(204, 204, 204);
     text-decoration: underline;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 /* Projects */
@@ -415,7 +444,7 @@ header {
 
 /* Gaming */
 
-.carousel {
+.carousel-black {
     background-color: black;
 }
 

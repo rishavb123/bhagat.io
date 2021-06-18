@@ -6,8 +6,6 @@ const overlay = _overlay[0];
 
 const output = overlay.getContext('2d');
 
-const isTouchDevice = 'ontouchstart' in document.documentElement;
-
 let overlay_state = "none";
 
 overlay.width = innerWidth;
@@ -29,6 +27,16 @@ window.onmousemove = e => {
     mouseY = e.pageY;
 }
 
+const artCropImage = new Image();
+function handleCarousel(e, tag=0) {
+    console.log("Calling here with tag", tag);
+    if (artCrops[e.relatedTarget.id] && (tag !== 1231234 || !artCropImage.src))
+        artCropImage.src = artCrops[e.relatedTarget.id];
+    else
+        setTimeout(() => handleCarousel(e, tag=1231234), 1000)
+}
+$('#mtg-carousel').on('slide.bs.carousel', handleCarousel);
+
 function processFrame() {
     output.clearRect(0, 0, overlay.width, overlay.height);
 
@@ -47,8 +55,8 @@ function processFrame() {
             output.drawImage(education_img, x, y, w, h);
             break;
         case "mtg":
-            output.globalAlpha = 0.15;
-            output.drawImage(gif_canvas, x, y, w, h);
+            output.globalAlpha = 0.2;
+            output.drawImage(artCropImage, x, y, w, h);
             break;
     }
 }
@@ -88,7 +96,7 @@ overlay_config = {
     },
     "mtg": {
         above: "martial_arts",
-        offset: "15%"
+        offset: "25%"
     },
     "setup": {
         above: "mtg",
@@ -132,8 +140,6 @@ if(!isTouchDevice) {
             offset: overlay_section_config.offset
         });
     }
-} else {
-    $('.subsection-description img').remove();
 }
 
 video.onended = () => video.play();
