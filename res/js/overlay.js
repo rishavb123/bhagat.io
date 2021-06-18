@@ -29,7 +29,6 @@ window.onmousemove = e => {
 
 const artCropImage = new Image();
 function handleCarousel(e, tag=0) {
-    console.log("Calling here with tag", tag);
     if (artCrops[e.relatedTarget.id] && (tag !== 1231234 || !artCropImage.src))
         artCropImage.src = artCrops[e.relatedTarget.id];
     else
