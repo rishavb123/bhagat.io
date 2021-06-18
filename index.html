@@ -422,7 +422,13 @@
                 <div class="edh-container {{mobile}}">
                     <img class="edh-img {{mobile}}" src="{{image}}" alt="{{commanderName}}">
                     <p class="text edh-desc {{mobile}}">
-                        <b>{{name}}</b>
+                        <b class="edh-deck-name">{{name}}</b>
+                        <br />
+                        <span class="edh-color-icons-holder">
+                            {{#each colors}}
+                                <img src="./res/imgs/mtg-color-symbols/{{this}}.png" class="edh-color-img" />
+                            {{/each}}
+                        </span>
                         <br />
                         <a href={{url}} class="deck-links">{{url}}</a>
                         <br /> <br />

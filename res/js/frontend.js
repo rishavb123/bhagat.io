@@ -165,6 +165,9 @@ fetch('https://bhagat-api.herokuapp.com/db', {
         $("#deck-indicator-template-holder").append(deckIndicatorTemplate(indicatorData));
     }
 
+    const colors = ['W', 'U', 'B', 'R', 'G'];
+    const colorsSort = (a, b) => colors.indexOf(a) < colors.indexOf(b)? -1: 1;
+
     data = data.documents.map((deck, i) => ({
         classes: i == 0 ? "active" : "",
         mobile: isTouchDevice ? "mobile": "",
@@ -174,6 +177,7 @@ fetch('https://bhagat-api.herokuapp.com/db', {
         art: deck.commander.art_crop,
         id: deck.name.replaceAll(" ", "-"),
         commanderName: deck.commander.name,
+        colors: deck.commander.color_identity?.sort(colorsSort),
         url: deck.url
     }));
 

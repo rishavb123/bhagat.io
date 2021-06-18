@@ -291,26 +291,33 @@ header {
     flex-direction: column;
 }
 
+.edh-deck-name {
+    font-size: 120%;
+    text-decoration: underline;
+}
+
 .edh-img {
     display: inline-block;
     width: 21vw;
     height: 29.4vw;
-    margin-left: 10%;
-    margin-right: 0;
+    margin-left: 7vw;
 }
 
 .edh-img.mobile {
     width: 70vw;
     height: 51.1vw;
+    margin-left: 0;
 }
 
 .edh-desc {
     display: inline-block;
-    width: 50%;
+    width: 40%;
+    margin-right: 7vw;
 }
 
 .edh-desc.mobile {
     width: 100%;
+    margin-right: 0;
 }
 
 .deck-links {
@@ -318,6 +325,10 @@ header {
     text-decoration: underline;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.edh-color-img {
+    width: 5%;
 }
 
 /* Projects */
