@@ -1,6 +1,5 @@
 const artCrops = {};
 
-// TODO: Load in projects the same way
 fetch('https://bhagat-api.herokuapp.com/db', {
     method: 'POST',
     headers: {
