@@ -7,7 +7,17 @@ let curOffset = 0;
 const perPage = 9;
 let lastProjects = [];
 
-const progressBgColors = ['bg-primary', 'bg-success', 'bg-info', 'bg-warning', 'bg-danger', 'bg-secondary'];
+const progressBgColorsMap = {
+    python: 'bg-primary',
+    java: 'bg-success',
+    javascript: 'bg-info',
+    c: 'bg-warning',
+    'c#': 'bg-warning',
+    'c++': 'bg-warning',
+    html: 'bg-danger',
+    css: 'bg-success',
+    default: 'bg-secondary'
+};
 
 function formatIso(iso) {
     return new Date(iso).toLocaleDateString("en-US", {
@@ -44,10 +54,9 @@ function loadProjects() {
     }).then(resp => resp.json()).then((data) => {
         data = data.documents.map((d) => {
             const copy = { ...d };
-            for (let i = 0; i < copy.languages.length; i++) {
-                const language = copy.languages[i];
+            for (const language of copy.languages) {
                 language.percent = Math.round(language.percent * 10000) / 100.0;
-                language.bgColor = progressBgColors[i % progressBgColors.length];
+                language.bgColor = progressBgColorsMap[language.name.toLowerCase()] || progressBgColorsMap.default;
             }
             copy.createdDate = formatIso(copy.createdDate);
             copy.lastUpdated = formatIso(copy.lastUpdated);
