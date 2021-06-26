@@ -4,7 +4,8 @@
 // $('#full-project-list').append(template(projects));
 
 let curOffset = 0;
-const perPage = 10;
+const perPage = 9;
+let lastProjects = [];
 
 const progressBgColors = ['bg-primary', 'bg-success', 'bg-info', 'bg-warning', 'bg-danger', 'bg-secondary'];
 
@@ -52,9 +53,20 @@ function loadProjects() {
             copy.lastUpdated = formatIso(copy.lastUpdated);
             return copy;
         });
+        data = lastProjects.concat(data);
+        lastProjects = data;
         const source = $('#projects-template')[0].innerHTML;
         const template = Handlebars.compile(source);
-        $('#full-project-list').append(template(data));
+        const reorderedData = [];
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < Math.ceil(data.length / 3); j++) {
+                const idx = 3 * j + i;
+                if (idx < data.length) {
+                    reorderedData.push(data[idx]);
+                }
+            }
+        }
+        $('#full-project-list').html(template(reorderedData));
         curOffset += perPage;
         if (data.length < perPage) {
             $('#load-more-projects').remove();
