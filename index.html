@@ -172,6 +172,7 @@
 
         <div id="project-holder">
             <div id="full-project-list" class="card-columns"></div>
+            <button class="btn btn-secondary" id="load-more-projects">Load More</button>
         </div>
     </div>
 
@@ -391,18 +392,26 @@
         </video>
     </div>    
 
-    <!-- TODO: make templates look better -->
     <template id="projects-template">
         {{#each this}}
             <div class="card project">
-                <img class="card-img-top" src="res/imgs/projects/{{image_file}}">
+                {{#if info.imageUrl}}
+                    <img class="card-img-top" src="{{info.imageUrl}}">
+                {{/if}}
                 <div class="card-body">
                     <h5 class="card-title">{{name}}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">({{language}})</h6>
+                    {{#each languages}}
+                        <div class="progress" style="display: inline-block; width: 75%; background-color: rgb(58, 58, 58);">
+                            <div class="progress-bar {{bgColor}}" role="progressbar" style="width: {{percent}}%" aria-valuenow="{{percent}}" aria-valuemin="0" aria-valuemax="1">{{name}}</div>
+                        </div>
+                        {{percent}}%
+                        <br />
+                    {{/each}}
+                    <h6 class="project-dates">{{createdDate}} - {{lastUpdated}}</h6>
                     <p class="card-text">{{description}}</p>
                     <div class="btn-group">
-                        {{#each links}}     
-                            <a href="{{this}}" class="btn btn-primary card-link">{{@key}}</a>
+                        {{#each info.links}}     
+                            <a href="{{url}}" class="btn btn-primary card-link">{{name}}</a>
                         {{/each}}
                     </div>
                 </div>
