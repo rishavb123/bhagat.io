@@ -356,6 +356,7 @@ header {
 }
 
 .project {
+    margin: 2%;
     background-color: black;
     color: rgb(184, 184, 184);
     transition: font-size 1s, color 1s;
