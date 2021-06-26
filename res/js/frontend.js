@@ -125,7 +125,7 @@ if('ontouchstart' in document.documentElement) {
 
 const artCrops = {};
 
-
+// Load in projects the same way
 fetch('https://bhagat-api.herokuapp.com/db', {
     method: 'POST',
     headers: {
