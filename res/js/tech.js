@@ -1,3 +1,4 @@
+// TODO: move this stuff over to mongo db
 let tech = {
     computers: [
         {

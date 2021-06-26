@@ -350,31 +350,12 @@ header {
     padding: 0;
 }
 
-#project-holder button {
-    background-color: blue;
-    position: absolute;
-    height: 50vh;
-}
-
-#leftBtn {
-    left: 0;
-}
-
-#rightBtn {
-    right:0;
-}
-
 #full-project-list {
-    display: flex;
     margin-left: 10%;
     width: 80%;
-    overflow-x: scroll;
 }
 
 .project {
-    width: 30vw;
-    margin: 2%;
-    min-width: 260px;
     background-color: black;
     color: rgb(184, 184, 184);
     transition: font-size 1s, color 1s;
