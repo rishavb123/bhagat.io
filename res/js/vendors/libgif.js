@@ -129,7 +129,6 @@
     };
 
     var lzwDecode = function (minCodeSize, data) {
-        // TODO: Now that the GIF parser is a bit different, maybe this should get an array of bytes instead of a String?
         var pos = 0; // Maybe this streaming thing should be merged with the Stream?
         var readCode = function (size) {
             var code = 0;
@@ -225,7 +224,7 @@
             var hdr = {};
             hdr.sig = st.read(3);
             hdr.ver = st.read(3);
-            if (hdr.sig !== 'GIF') throw new Error('Not a GIF file.'); // XXX: This should probably be handled more nicely.
+            if (hdr.sig !== 'GIF') throw new Error('Not a GIF file.'); 
             hdr.width = st.readUnsigned();
             hdr.height = st.readUnsigned();
 
@@ -285,7 +284,6 @@
 
                 var parseUnknownAppExt = function (block) {
                     block.appData = readSubBlocks();
-                    // FIXME: This won't work if a handler wants to match on any identifier.
                     handler.app && handler.app[block.identifier] && handler.app[block.identifier](block);
                 };
 
@@ -405,7 +403,7 @@
                     handler.eof && handler.eof(block);
                     break;
                 default:
-                    throw new Error('Unknown block: 0x' + block.sentinel.toString(16)); // TODO: Pad this with a 0.
+                    throw new Error('Unknown block: 0x' + block.sentinel.toString(16));
             }
 
             if (block.type !== 'eof') setTimeout(parseBlock, 0);
@@ -476,7 +474,6 @@
             frame = null;
         };
 
-        // XXX: There's probably a better way to handle catching exceptions when
         // callbacks are involved.
         var doParse = function () {
             try {
@@ -614,7 +611,7 @@
             var currIdx = frames.length;
 
             //ct = color table, gct = global color table
-            var ct = img.lctFlag ? img.lct : hdr.gct; // TODO: What if neither exists?
+            var ct = img.lctFlag ? img.lct : hdr.gct;
 
             /*
             Disposal method indicates the way in which the graphic is to
@@ -704,7 +701,7 @@
                 return (i + delta + frames.length) % frames.length;
             };
 
-            var stepFrame = function (amount) { // XXX: Name is confusing.
+            var stepFrame = function (amount) { 
                 i = i + amount;
 
                 putFrame();
@@ -732,7 +729,7 @@
 
                     stepFrame(1);
                     var delay = frames[i].delay * 10;
-                    if (!delay) delay = 100; // FIXME: Should this even default at all? What should it be?
+                    if (!delay) delay = 100; 
 
                     var nextFrameNo = getNextFrameNo();
                     if (nextFrameNo === 0) {
@@ -831,7 +828,6 @@
             com: withProgress(doNothing),
             // I guess that's all for now.
             app: {
-                // TODO: Is there much point in actually supporting iterations?
                 NETSCAPE: withProgress(doNothing)
             },
             img: withProgress(doImg, true),
