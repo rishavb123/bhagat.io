@@ -1,5 +1,5 @@
 let curOffset = 0;
-const perPage = 100;
+const perPage = 9;
 const maxLangs = 7;
 let lastProjects = [];
 
@@ -81,6 +81,7 @@ function loadProjects() {
         lastProjects = data;
         const source = $('#projects-template')[0].innerHTML;
         const template = Handlebars.compile(source);
+        // TODO: fix reording with large amount of projects
         const reorderedData = [];
         for (let i = 0; i < 3; i++) {
             for (let j = 0; j < Math.ceil(data.length / 3); j++) {
