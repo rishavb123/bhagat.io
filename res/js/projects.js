@@ -1,10 +1,6 @@
-// let projects_list = document.getElementById('full-project-list');
-// const source = $('#projects-template')[0].innerHTML;
-// const template = Handlebars.compile(source);
-// $('#full-project-list').append(template(projects));
-
 let curOffset = 0;
-const perPage = 9;
+const perPage = 100;
+const maxLangs = 7;
 let lastProjects = [];
 
 const bgColors = [
@@ -65,9 +61,16 @@ function loadProjects() {
     }).then(resp => resp.json()).then((data) => {
         data = data.documents.map((d) => {
             const copy = { ...d };
-            for (const language of copy.languages) {
+            copy.languages = [];
+            let i = 0;
+            for (const oldLanguage of d.languages) {
+                const language = { ...oldLanguage };
                 language.percent = Math.round(language.percent * 10000) / 100.0;
                 language.bgColor = progressBgColorsMap[language.name.toLowerCase()] || progressBgColorsMap.default;
+                if (language.percent >= 0.1 && i < maxLangs) {
+                    copy.languages.push(language);
+                    i++;
+                }
             }
             copy.createdDate = formatIso(copy.createdDate);
             copy.lastUpdated = formatIso(copy.lastUpdated);
@@ -92,6 +95,7 @@ function loadProjects() {
         if (numLoaded < perPage) {
             $('#load-more-projects').remove();
         }
+        Waypoint.refreshAll()
     });
 }
 
