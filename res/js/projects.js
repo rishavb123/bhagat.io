@@ -7,6 +7,16 @@ let curOffset = 0;
 const perPage = 9;
 let lastProjects = [];
 
+const bgColors = [
+    'bg-primary',
+    'bg-success',
+    'bg-info',
+    'bg-warning',
+    'bg-warning',
+    'bg-warning',
+    'bg-danger',
+    'bg-success'
+];
 const progressBgColorsMap = {
     python: 'bg-primary',
     java: 'bg-success',
@@ -16,7 +26,8 @@ const progressBgColorsMap = {
     'c++': 'bg-warning',
     html: 'bg-danger',
     css: 'bg-success',
-    default: 'bg-secondary'
+    default: 'bg-secondary',
+    random: () => bgColors[Math.floor(Math.random() * bgColors.length)],
 };
 
 function formatIso(iso) {
@@ -62,6 +73,7 @@ function loadProjects() {
             copy.lastUpdated = formatIso(copy.lastUpdated);
             return copy;
         });
+        const numLoaded = data.length;
         data = lastProjects.concat(data);
         lastProjects = data;
         const source = $('#projects-template')[0].innerHTML;
@@ -77,7 +89,7 @@ function loadProjects() {
         }
         $('#full-project-list').html(template(reorderedData));
         curOffset += perPage;
-        if (data.length < perPage) {
+        if (numLoaded < perPage) {
             $('#load-more-projects').remove();
         }
     });
