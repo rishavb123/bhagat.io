@@ -64,11 +64,11 @@ new Rellax('.rellax');
 
 
 
-if('ontouchstart' in document.documentElement) {
+// if(isTouchDevice) {
     // $('#setup-video').css('pointer-events', 'auto');
     // $('#setup-video').css('border-radius', '0');
     // $('#setup-video').attr("src", "https://www.youtube.com/embed/XuCRpQ7TmHo?rel=0&controls=1")
-}
+// }
 
 // let player;
 // function onYouTubeIframeAPIReady() {
