@@ -82,16 +82,7 @@ function loadProjects() {
         const source = $('#projects-template')[0].innerHTML;
         const template = Handlebars.compile(source);
         // TODO: fix reording with large amount of projects
-        const reorderedData = [];
-        for (let i = 0; i < 3; i++) {
-            for (let j = 0; j < Math.ceil(data.length / 3); j++) {
-                const idx = 3 * j + i;
-                if (idx < data.length) {
-                    reorderedData.push(data[idx]);
-                }
-            }
-        }
-        $('#full-project-list').html(template(reorderedData));
+        $('#full-project-list').html(template(data));
         curOffset += perPage;
         if (numLoaded < perPage) {
             $('#load-more-projects').remove();
