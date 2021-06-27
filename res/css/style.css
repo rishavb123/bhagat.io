@@ -139,6 +139,10 @@ i:hover {
     background:rgb(255, 255, 255);
 }
 
+.temp-el {
+    visibility: hidden;
+}
+
 /*Header*/
 
 #brand-logo {
@@ -341,14 +345,20 @@ header {
     padding: 0;
 }
 
-#full-project-list {
+#full-project-list, #temp-load-projects {
     width: 80%;
+}
+
+#full-project-list .col {
+    padding: 0;
+    margin: 0.5%;
 }
 
 .project {
     background-color: rgb(22, 22, 22);
     color: rgb(184, 184, 184);
     transition: font-size 1s, color 1s;
+    margin-bottom: 4%;
 }
 
 .project:hover {

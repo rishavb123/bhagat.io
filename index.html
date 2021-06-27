@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<!-- TODO: reorganize the js files to make it more organized -->
 <head>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143464501-1"></script>
@@ -171,7 +170,11 @@
         <h2>Projects</h2>
 
         <div id="project-holder">
-            <div id="full-project-list" class="card-columns"></div>
+            <div id="full-project-list" class="row flex-nowrap">
+                <div id="project-col-a" class="col"></div>
+                <div id="project-col-b" class="col"></div>
+                <div id="project-col-c" class="col"></div>
+            </div>
             <button class="btn btn-secondary" id="load-more-projects">Load More</button>
             <p class="site-text" style="margin-top: 5%;">To see more of my projects check my github at <a href="https://gh.bhagat.io">gh.bhagat.io</a></p>
         </div>
@@ -457,6 +460,8 @@
             </li>
         {{/each}}
     </template>
+
+    <div id="temp-load-projects" class="card-columns temp-el"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js" integrity="sha256-oh7N5nthuhldTk8/34Za7FXv3BkeVN9vAnYk/pLfC78=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="res/js/vendors/jquery-3.3.1.min.js"></script>

@@ -1,7 +1,13 @@
 let curOffset = 0;
 const perPage = 9;
 const maxLangs = 7;
-let lastProjects = [];
+
+const colA = [];
+const colB = [];
+const colC = [];
+let aH = 0;
+let bH = 0;
+let cH = 0;
 
 const bgColors = [
     'bg-primary',
@@ -77,18 +83,51 @@ function loadProjects() {
             return copy;
         });
         const numLoaded = data.length;
-        data = lastProjects.concat(data);
-        lastProjects = data;
         const source = $('#projects-template')[0].innerHTML;
         const template = Handlebars.compile(source);
-        // TODO: fix reording with large amount of projects
-        $('#full-project-list').html(template(data));
+        const newHtml = template(data);
+        
+        if (!heightMoreThanWidth) {
+            $('#temp-load-projects').html(newHtml);
+            const projectCards = $('#temp-load-projects').find('.project');
+
+            projectCards.each((i) => {
+                const card = $(projectCards[i]);
+                if (aH <= bH && aH <= cH) {
+                    colA.push(card[0].outerHTML);
+                    aH += card.outerHeight(true);
+                } else if (bH <= cH) {
+                    colB.push(card[0].outerHTML);
+                    bH += card.outerHeight(true);
+                } else {
+                    colC.push(card[0].outerHTML);
+                    cH += card.outerHeight(true);
+                }
+            });
+            $('#temp-load-projects').html("");
+
+            const reduceFunc = (total, str) => total + str;
+            const htmlA = colA.reduce(reduceFunc);
+            const htmlB = colB.reduce(reduceFunc);
+            const htmlC = colC.reduce(reduceFunc);
+
+            $('#full-project-list').html(`<div class='col'>${htmlA}</div>`);
+            $('#full-project-list').append(`<div class='col'>${htmlB}</div>`);
+            $('#full-project-list').append(`<div class='col'>${htmlC}</div>`);
+        } else {
+            $('#full-project-list').append(newHtml);
+        }
         curOffset += perPage;
         if (numLoaded < perPage) {
             $('#load-more-projects').remove();
         }
         Waypoint.refreshAll()
     });
+}
+
+if (heightMoreThanWidth) {
+    $('#full-project-list').html("");
+    $('#full-project-list').removeClass("flex-nowrap");
 }
 
 loadProjects();

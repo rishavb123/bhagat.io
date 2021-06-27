@@ -1,5 +1,6 @@
 let theta = 0;
 const isTouchDevice = 'ontouchstart' in document.documentElement;
+const heightMoreThanWidth = $(window).height() > $(window).width();
 
 function headerImageRotate(a) {
     theta = a % 360;
