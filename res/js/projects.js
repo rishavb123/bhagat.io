@@ -2,13 +2,6 @@ let curOffset = 0;
 const perPage = 9;
 const maxLangs = 7;
 
-const colA = [];
-const colB = [];
-const colC = [];
-let aH = 0;
-let bH = 0;
-let cH = 0;
-
 const bgColors = [
     'bg-primary',
     'bg-success',
@@ -91,6 +84,28 @@ function loadProjects() {
             $('#temp-load-projects').html(newHtml);
             const projectCards = $('#temp-load-projects').find('.project');
 
+            const colA = [];
+            const colB = [];
+            const colC = [];
+            let aH = 0;
+            let bH = 0;
+            let cH = 0;
+
+            const colAProjects = $('#project-col-a').find('.project');
+            colAProjects.each((i) => {
+                aH += $(colAProjects[i]).outerHeight(true);
+            });
+
+            const colBProjects = $('#project-col-b').find('.project');
+            colBProjects.each((i) => {
+                bH += $(colBProjects[i]).outerHeight(true);
+            });
+
+            const colCProjects = $('#project-col-c').find('.project');
+            colCProjects.each((i) => {
+                cH += $(colCProjects[i]).outerHeight(true);
+            });
+
             projectCards.each((i) => {
                 const card = $(projectCards[i]);
                 if (aH <= bH && aH <= cH) {
@@ -111,9 +126,9 @@ function loadProjects() {
             const htmlB = colB.reduce(reduceFunc);
             const htmlC = colC.reduce(reduceFunc);
 
-            $('#full-project-list').html(`<div class='col'>${htmlA}</div>`);
-            $('#full-project-list').append(`<div class='col'>${htmlB}</div>`);
-            $('#full-project-list').append(`<div class='col'>${htmlC}</div>`);
+            $('#project-col-a').append(htmlA);
+            $('#project-col-b').append(htmlB);
+            $('#project-col-c').append(htmlC);
         } else {
             $('#full-project-list').append(newHtml);
         }
