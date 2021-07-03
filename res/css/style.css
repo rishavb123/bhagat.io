@@ -247,6 +247,17 @@ header {
     color: white;
 }
 
+@media only screen and (max-width: 750px){
+    .subsection-description.adaptive {
+        flex-direction: column;
+    }
+
+    .subsection-description.adaptive img {
+        width: 60%;
+        margin-bottom: 3%;
+    }
+}
+
 .subsection-description .site-text {
     padding: 0 5%;
 }
@@ -454,6 +465,12 @@ header {
 /* Experience */
 #experience .subsection {
     margin-bottom: 10%;
+}
+
+@media only screen and (max-width: 750px) {
+    #netelixer-description {
+        flex-direction: column-reverse;
+    }
 }
 
 /* Gaming */
