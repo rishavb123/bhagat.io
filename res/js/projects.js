@@ -41,9 +41,10 @@ function loadProjects() {
             db: 'bhagat-db',
             collection: 'gh-repos',
             options: {
-                sort: {
-                    lastUpdated: -1
-                },
+                sort: [
+                    ["info.priority", -1],
+                    ["lastUpdated", -1]
+                ],
                 skip: curOffset,
                 limit: perPage,
                 projection: {
@@ -51,7 +52,8 @@ function loadProjects() {
                     name: 1,
                     description: 1,
                     languages: 1,
-                    info: 1,
+                    "info.links": 1,
+                    "info.imageUrl": 1,
                     createdDate: 1,
                     lastUpdated: 1
                 }
