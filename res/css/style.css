@@ -360,9 +360,8 @@ header {
     width: 80%;
 }
 
-#full-project-list .col {
-    padding: 0;
-    margin: 0.5%;
+#full-project-list .col-4 {
+    padding: 0.5%;
 }
 
 .project {
