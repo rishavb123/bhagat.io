@@ -139,6 +139,9 @@ function loadProjects() {
             $('#load-more-projects').remove();
         }
         Waypoint.refreshAll()
+        $('#full-project-list img').on("load", () => {
+            Waypoint.refreshAll()
+        })
     });
 }
 
