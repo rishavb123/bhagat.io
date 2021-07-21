@@ -428,6 +428,12 @@ header {
     border-radius: 25px;
 }
 
+#setup-video-iframe {
+    width: 65vw;
+    height: 36vw;
+    border-radius: 25px;
+}
+
 /* Pictures */
 
 .carousel-item img {
