@@ -63,6 +63,24 @@ new SmoothScroll('a[href*="#"]', {
 
 new Rellax('.rellax');
 
+
+$(document).on('scroll', () => {
+    const scroll = $(document).scrollTop() + $(window).height() / 2;
+
+    const scrollStart = $('#setup').position().top;
+    const height = $('#setup').outerHeight();
+
+    const scrollMargin = 0.3;
+    const scrollUpshift = 0.05;
+
+    const offset = scroll - scrollStart;
+    const ratio = (offset - (scrollMargin - scrollUpshift) * height) / ((1 - 2 * scrollMargin) * height);
+    
+
+    $('#setup-img img').css('opacity', 1 - Math.max(Math.min(ratio, 1), 0));
+
+})
+
 if (isTouchDevice) {
     $('.subsection-description img:not(.mobile-keep)').remove();
 }
