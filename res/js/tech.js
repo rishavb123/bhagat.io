@@ -232,6 +232,17 @@ let tech = {
             }
         },
         {
+            name: "Raycon E55 Performer Earbuds",
+            type: "Earbuds",
+            link: "https://rayconglobal.com/products/e55-true-wireless-earbuds?variant=29457529077783",
+            color: "black",
+            specs: {
+                stereo: true,
+                mic: true,
+                other: ["Wireless Charging"]
+            }
+        }
+        {
             name: "TOZO T10 Bluetooth 5.0 Wireless Earbuds",
             type: "Earbuds",
             link: "https://www.amazon.com/gp/product/B07J2Z5DBM/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1",
@@ -239,7 +250,7 @@ let tech = {
             specs: {
                 stereo: true,
                 mic: true,
-                other: ["IPX8 Waterproof"]
+                other: ["IPX8 Waterproof", "Wireless Charging"]
             }
         }
     ],
