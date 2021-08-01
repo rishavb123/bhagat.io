@@ -71,10 +71,10 @@ $(document).on('scroll', () => {
     const height = $('#setup').outerHeight();
 
     const scrollMargin = 0.3;
-    const scrollUpshift = 0.05;
+    const scrollUpshift = 0.1;
 
     const offset = scroll - scrollStart;
-    const ratio = (offset - (scrollMargin - scrollUpshift) * height) / ((1 - 2 * scrollMargin) * height);
+    const ratio = (offset - (scrollMargin + scrollUpshift) * height) / ((1 - 2 * scrollMargin) * height);
     
 
     $('#setup-img img').css('opacity', 1 - Math.max(Math.min(ratio, 1), 0));
@@ -83,4 +83,9 @@ $(document).on('scroll', () => {
 
 if (isTouchDevice) {
     $('.subsection-description img:not(.mobile-keep)').remove();
+    $('*').addClass('mobile');
+}
+
+if (window.innerHeight > window.innerWidth) {
+    $('*').addClass('vertical-screen');
 }

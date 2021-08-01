@@ -416,10 +416,15 @@ header {
 }
 
 #setup-img {
-    width: 65vw;
+    height: 50vh;
     border-radius: 26px;
-    background-image: url('../imgs/setup/setup-dark.png');
+    background-image: url('../imgs/setup/setup-dark.jpg');
     background-size: cover;
+}
+
+#setup-img.vertical-screen {
+    width: 80vw;
+    height: auto;
 }
 
 #setup-img img {
