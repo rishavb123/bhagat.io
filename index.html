@@ -383,6 +383,23 @@
         <p class="site-text contact-text">
             Linkedin<i class="fab fa-linkedin social-icon"></i> : <a href="https://www.linkedin.com/in/rishavb">rishavb</a>
         </p>
+
+        <p class="site-text">Or get in contact with me directly using the form below: </p>
+        <div class="contact-form">
+            <div class="form-group">
+                <label style="color: white" for="contact-form-name">Name</label>
+                <input type="email" class="form-control" id="contact-form-name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label style="color: white" for="contact-form-email">Email</label>
+                <input type="email" class="form-control" id="contact-form-email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label style="color: white" for="contact-form-message">Message</label>
+                <textarea class="form-control" id="contact-form-message" rows="6"></textarea>
+            </div>
+            <button id='contact-form-submit' class="btn btn-primary">Submit</button>
+        </div>
     </div>
 
     <div class='overlay'>
@@ -457,6 +474,13 @@
         {{/each}}
     </template>
 
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
     <div id="temp-load-projects" class="card-columns temp-el"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js" integrity="sha256-oh7N5nthuhldTk8/34Za7FXv3BkeVN9vAnYk/pLfC78=" crossorigin="anonymous"></script>
@@ -473,6 +497,7 @@
     <script type="text/javascript" src="res/js/projects.js"></script>
     <script type="text/javascript" src="res/js/mtg_decks.js"></script>
     <script type="text/javascript" src="res/js/overlay.js"></script>
+    <script type="text/javascript" src="res/js/contact.js"></script>
     <script type="text/javascript" src="res/js/tech.js"></script>
 </body>
 

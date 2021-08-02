@@ -478,6 +478,16 @@ header {
     margin-bottom: 2%;
 }
 
+.contact-form {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.contact-form.vertical-screen {
+    width: 80%;
+    margin-left: 10%;
+}
+
 /* Experience */
 #experience .subsection {
     margin-bottom: 10%;
