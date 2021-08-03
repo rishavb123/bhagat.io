@@ -83,6 +83,7 @@ $(document).on('scroll', () => {
 
 if (isTouchDevice) {
     $('.subsection-description img:not(.mobile-keep)').remove();
+    $('.mobile-remove').remove();
     $('*').addClass('mobile');
 }
 
