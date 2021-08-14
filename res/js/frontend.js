@@ -63,6 +63,27 @@ new SmoothScroll('a[href*="#"]', {
 
 new Rellax('.rellax');
 
+fetch('https://bhagat-api.herokuapp.com/db', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        db: "bhagat-db",
+        collection: "personal-data",
+        query: {
+            name: "resume-embed-link"
+        },
+        options: {
+            projection: {
+                _id: 0,
+                name: 0
+            }
+        }
+    })
+}).then(resp => resp.json()).then((data) => {
+    $('#resume-iframe').attr('src', data.documents[0].value);
+});
 
 $(document).on('scroll', () => {
     const scroll = $(document).scrollTop() + $(window).height() / 2;
