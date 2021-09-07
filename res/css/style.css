@@ -101,12 +101,19 @@ h3:after {
 }
 
 .site-text {
-    text-align: center;
     font-family: 'Time Burner';
     padding-left: 15%;
     padding-right: 15%;
     font-size: 120%;
     color: white;
+}
+
+.site-text.st-center {
+    text-align: center;
+}
+
+.site-text a {
+    color: rgb(149, 216, 255);
 }
 
 .site-text b {
@@ -476,6 +483,7 @@ header {
 .contact-text {
     color: rgb(228, 11, 228);
     margin-bottom: 2%;
+    text-align: center;
 }
 
 .contact-form {
