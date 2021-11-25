@@ -62,6 +62,7 @@ function loadProjects() {
     }).then(resp => resp.json()).then((data) => {
         data = data.documents.map((d) => {
             const copy = { ...d };
+            copy.description = copy.description.replace(/\n/g, '<br>').linkify();
             copy.languages = [];
             let i = 0;
             for (const oldLanguage of d.languages) {

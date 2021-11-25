@@ -46,7 +46,7 @@ fetch('https://bhagat-api.herokuapp.com/db', {
         classes: i == 0 ? "active" : "",
         mobile: isTouchDevice ? "mobile": "",
         name: deck.name,
-        description: deck.description? deck.description.replaceAll("; ", " <br/><br/>"): "No Description",
+        description: deck.description? deck.description.replaceAll("; ", " <br/><br/>").linkify(): "No Description",
         image: isTouchDevice? deck.commander.art_crop: deck.commander.image_url,
         art: deck.commander.art_crop,
         id: deck.name.replaceAll(" ", "-"),
