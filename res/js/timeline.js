@@ -37,8 +37,8 @@ fetch('https://bhagat-api.herokuapp.com/db', {
     console.log(data);
     const timelineJSON = {
         events: data.documents.map((doc) => ({
-            start_date: doc.startDate.month > 12 || date.startDate.day > 31? dateJSON: startDate,
-            end_date: (doc.startDate.stamp === doc.endDate.stamp) ? undefined : (doc.endDate.month > 12 || date.endDate.day > 31? dateJSON: endDate),
+            start_date: doc.startDate.month > 12 || doc.startDate.day > 31? dateJSON: doc.startDate,
+            end_date: (doc.startDate.stamp === doc.endDate.stamp) ? undefined : (doc.endDate.month > 12 || doc.endDate.day > 31? dateJSON: doc.endDate),
             text: {
                 headline: doc.name,
                 text: doc.description
