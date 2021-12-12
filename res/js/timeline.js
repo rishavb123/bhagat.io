@@ -4,6 +4,13 @@ const options = {
     default_bg_color: {r: 255, g: 255, b: 255}
 };
 
+const date = new Date();
+const dateJSON = {
+    month: date.getMonth() + 1,
+    day: date.getDate(),
+    year: date.getFullYear()
+};
+
 fetch('https://bhagat-api.herokuapp.com/db', {
     method: 'POST',
     headers: {
@@ -30,8 +37,8 @@ fetch('https://bhagat-api.herokuapp.com/db', {
     console.log(data);
     const timelineJSON = {
         events: data.documents.map((doc) => ({
-            start_date: doc.startDate,
-            end_date: (doc.startDate.stamp === doc.endDate.stamp) ? undefined : doc.endDate,
+            start_date: doc.startDate.month > 12 || date.startDate.day > 31? dateJSON: startDate,
+            end_date: (doc.startDate.stamp === doc.endDate.stamp) ? undefined : (doc.endDate.month > 12 || date.endDate.day > 31? dateJSON: endDate),
             text: {
                 headline: doc.name,
                 text: doc.description
