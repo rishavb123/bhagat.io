@@ -37,9 +37,7 @@ fetch('https://bhagat-api.herokuapp.com/db', {
                 text: doc.description
             },
             media: (doc.media) ? {
-                url: doc.media.url,
-                caption: doc.media.caption,
-                alt: doc.media.caption
+                url: doc.media,
             }: undefined
         })),
     };
