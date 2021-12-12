@@ -353,6 +353,40 @@ header {
     width: 5%;
 }
 
+/* Timeline */
+
+#timeline-embed h2:after {
+    display: none;
+    height: 0;
+    width: 0;
+    margin: 0;
+}
+
+#timeline-embed h3:after {
+    display: none;
+    height: 0;
+    width: 0;
+    margin: 0;
+}
+
+#timeline-centerer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+}
+
+#timeline-embed {
+    filter: invert(1);
+    width: 80%;
+    height: 600px;
+    display: block;
+}
+
+.tl-media-content {
+    filter: invert(1);
+}
+
 /* Projects */
 
 #project-holder {
