@@ -108,7 +108,7 @@ let tech = {
                 tearing_prevention: "AMD FreeSync",
                 vesa_compatible: "100x100mm",
                 panel: "IPS",
-                ports: "1 display port and 2 HDMI",
+                ports: "2 display port and 2 HDMI",
                 other: ["stand", "curved"]
             }
         }
