@@ -93,6 +93,24 @@ let tech = {
                 aspect_ratio: "16:9",
                 other: ["usb powered", "portable", "kick stand"]
             }
+        },
+        {
+            name: "Sceptre C355W-3440UN",
+            type: "Monitor",
+            link: "https://www.amazon.com/gp/product/B0812DKDD9/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1",
+            color: "black & red",
+            label: "Home (NJ) Display",
+            specs: {
+                resolution: "3440x1440",
+                refresh_rate: "100Hz",
+                size: "35\"",
+                aspect_ratio: "21:9",
+                tearing_prevention: "AMD FreeSync",
+                vesa_compatible: "100x100mm",
+                panel: "IPS",
+                ports: "1 display port and 2 HDMI",
+                other: ["stand", "curved"]
+            }
         }
     ],
     peripherals: [
@@ -240,17 +258,6 @@ let tech = {
                 stereo: true,
                 mic: true,
                 other: ["Wireless Charging"]
-            }
-        }
-        {
-            name: "TOZO T10 Bluetooth 5.0 Wireless Earbuds",
-            type: "Earbuds",
-            link: "https://www.amazon.com/gp/product/B07J2Z5DBM/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1",
-            color: "black",
-            specs: {
-                stereo: true,
-                mic: true,
-                other: ["IPX8 Waterproof", "Wireless Charging"]
             }
         }
     ],
