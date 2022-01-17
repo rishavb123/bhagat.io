@@ -34,7 +34,6 @@ fetch('https://bhagat-api.herokuapp.com/db', {
         }
     })
 }).then(resp => resp.json()).then((data) => {
-    console.log(data);
     const timelineJSON = {
         events: data.documents.map((doc) => ({
             start_date: doc.startDate.month > 12 || doc.startDate.day > 31? dateJSON: doc.startDate,
@@ -48,6 +47,5 @@ fetch('https://bhagat-api.herokuapp.com/db', {
             }: undefined
         })),
     };
-    console.log(timelineJSON);
     new TL.Timeline('timeline-embed', timelineJSON, options);
 });
