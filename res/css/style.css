@@ -379,8 +379,9 @@ header {
 #timeline-embed {
     filter: invert(1);
     width: 80%;
-    height: 600px;
+    min-height: 600px;
     display: block;
+    padding-top: 2%;
 }
 
 .tl-media-content {
