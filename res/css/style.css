@@ -536,10 +536,18 @@ header {
     margin-bottom: 10%;
 }
 
-@media only screen and (max-width: 750px) {
-    #netelixer-description {
-        flex-direction: column-reverse;
-    }
+#experience .subsection .subsection-description.vertical-screen img {
+    order: 1;
+}
+
+#experience .subsection .subsection-description.vertical-screen p {
+    order: 2;
+}
+
+#load-more-experiences-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Gaming */

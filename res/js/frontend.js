@@ -111,3 +111,15 @@ if (isTouchDevice) {
 if (window.innerHeight > window.innerWidth) {
     $('*').addClass('vertical-screen');
 }
+
+$(() => { 
+    const numExperiences = 4;
+    $("#experience .subsection").slice(numExperiences).hide();
+    $("#load-more-experiences").click((e) => {
+        e.preventDefault();
+        $("#experience .subsection:hidden").slice(0, numExperiences).show();
+        if ($("#experience .subsection:hidden").length == 0) {
+            $("#load-more-experiences").fadeOut();
+        }
+    });
+});
