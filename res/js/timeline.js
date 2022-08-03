@@ -11,7 +11,7 @@ const dateJSON = {
     year: date.getFullYear()
 };
 
-fetch('https://bhagat-api.herokuapp.com/db', {
+fetch(`${API_URL}/db`, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'

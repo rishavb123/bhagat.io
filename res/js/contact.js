@@ -6,7 +6,7 @@ $('#contact-form-submit').click(() => {
     };
 
     if (detail.name && detail.returnAddress && detail.message) {
-        fetch('https://bhagat-api.herokuapp.com/contact/discord', {
+        fetch(`${API_URL}/contact/discord`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

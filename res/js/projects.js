@@ -32,7 +32,7 @@ function formatIso(iso) {
 }
 
 function loadProjects() {
-    fetch('https://bhagat-api.herokuapp.com/db', {
+    fetch(`${API_URL}/db`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

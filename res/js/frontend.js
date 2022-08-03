@@ -63,7 +63,7 @@ new SmoothScroll('a[href*="#"]', {
 
 new Rellax('.rellax');
 
-fetch('https://bhagat-api.herokuapp.com/db', {
+fetch(`${API_URL}/db`, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
