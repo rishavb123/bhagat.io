@@ -1,7 +1,17 @@
+let errorOccured = false;
+
 function apiCall(path, options, dataHandler, errorHandler = () => { }) {
-    fetch(`${API_URL}/${path}`, options).then(
-        resp => resp.json()
-    ).then(dataHandler).catch(errorHandler);
+    if (errorOccured) {
+        errorHandler();
+    }
+    else {
+        fetch(`${API_URL}/${path}`, options).then(
+            resp => resp.json()
+        ).then(dataHandler).catch(() => {
+            errorOccured = true;
+            errorHandler();
+        });
+    }
 }
 
 function dbApiCallWithBackup(options, dataHandler, backupName, offset = undefined, maxlen = undefined) {
