@@ -9,11 +9,13 @@ function dbApiCallWithBackup(options, dataHandler, backupName, offset = undefine
 }
 
 function dbErrorHandler(backupName, dataHandler, offset = undefined, maxlen = undefined) {
-    $.getJSON(DB_BACKUP, (data) => {
-        data = data[backupName];
-        if (offset != undefined) {
-            data.documents = maxlen? data.documents.slice(offset, offset + maxlen) : data.documents.slice(offset);
-        }
-        return dataHandler(data);
-    }); 
+    return () => {
+        $.getJSON(DB_BACKUP, (data) => {
+            data = data[backupName];
+            if (offset != undefined) {
+                data.documents = maxlen ? data.documents.slice(offset, offset + maxlen) : data.documents.slice(offset);
+            }
+            return dataHandler(data);
+        });
+    };
 }
