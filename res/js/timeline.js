@@ -11,7 +11,7 @@ const dateJSON = {
     year: date.getFullYear()
 };
 
-fetch(`${API_URL}/db`, {
+dbApiCallWithBackup({
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ fetch(`${API_URL}/db`, {
             }
         }
     })
-}).then(resp => resp.json()).then((data) => {
+}, (data) => {
     const timelineJSON = {
         events: data.documents.map((doc) => ({
             start_date: doc.startDate.month > 12 || doc.startDate.day > 31? dateJSON: doc.startDate,
@@ -48,4 +48,4 @@ fetch(`${API_URL}/db`, {
         })),
     };
     new TL.Timeline('timeline-embed', timelineJSON, options);
-});
+}, "timeline");

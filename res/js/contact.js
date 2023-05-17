@@ -6,19 +6,21 @@ $('#contact-form-submit').click(() => {
     };
 
     if (detail.name && detail.returnAddress && detail.message) {
-        fetch(`${API_URL}/contact/discord`, {
+        apiCall('contact/discord', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(detail)
-        }).then(resp => resp.json()).then((data) => {
+        }, (data) => {
             if (data.status) {
                 alert('Error: ' + data.msg);
             } else {
                 $('#contact-form-message').val('');
             }
-        });
+        }, (err) => {
+            alert("Contact service not available right now. Please try again later.")
+        })
     } else {
         alert('Error: Some fields are empty!')
     }

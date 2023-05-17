@@ -32,7 +32,7 @@ function formatIso(iso) {
 }
 
 function loadProjects() {
-    fetch(`${API_URL}/db`, {
+    dbApiCallWithBackup({
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -59,7 +59,7 @@ function loadProjects() {
                 }
             }
         })
-    }).then(resp => resp.json()).then((data) => {
+    }, (data) => {
         data = data.documents.map((d) => {
             const copy = { ...d };
             copy.description = copy.description.replace(/\n/g, '<br>').linkify();
@@ -143,7 +143,7 @@ function loadProjects() {
         $('#full-project-list img').on("load", () => {
             Waypoint.refreshAll()
         })
-    });
+    }, "repos", curOffset, perPage);
 }
 
 if (heightMoreThanWidth) {

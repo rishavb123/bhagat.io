@@ -63,7 +63,7 @@ new SmoothScroll('a[href*="#"]', {
 
 new Rellax('.rellax');
 
-fetch(`${API_URL}/db`, {
+dbApiCallWithBackup({
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -81,9 +81,9 @@ fetch(`${API_URL}/db`, {
             }
         }
     })
-}).then(resp => resp.json()).then((data) => {
+}, (data) => {
     $('#resume-iframe').attr('src', data.documents[0].value);
-});
+}, "resume")
 
 $(document).on('scroll', () => {
     const scroll = $(document).scrollTop() + $(window).height() / 2;

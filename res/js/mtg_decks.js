@@ -1,6 +1,6 @@
 const artCrops = {};
 
-fetch(`${API_URL}/db`, {
+dbApiCallWithBackup({
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -24,7 +24,7 @@ fetch(`${API_URL}/db`, {
             }
         }
     })
-}).then(resp => resp.json()).then((data) => {
+}, (data) => {
     if (!isTouchDevice) {
         const n = data.count;
         const indicatorData = [];
@@ -40,14 +40,14 @@ fetch(`${API_URL}/db`, {
     }
 
     const colors = ['W', 'U', 'B', 'R', 'G'];
-    const colorsSort = (a, b) => colors.indexOf(a) < colors.indexOf(b)? -1: 1;
+    const colorsSort = (a, b) => colors.indexOf(a) < colors.indexOf(b) ? -1 : 1;
 
     data = data.documents.map((deck, i) => ({
         classes: i == 0 ? "active" : "",
-        mobile: isTouchDevice ? "mobile": "",
+        mobile: isTouchDevice ? "mobile" : "",
         name: deck.name,
-        description: deck.description? deck.description.replaceAll("; ", " <br/><br/>").linkify(): "No Description",
-        image: isTouchDevice? deck.commander.art_crop: deck.commander.image_url,
+        description: deck.description ? deck.description.replaceAll("; ", " <br/><br/>").linkify() : "No Description",
+        image: isTouchDevice ? deck.commander.art_crop : deck.commander.image_url,
         art: deck.commander.art_crop,
         id: deck.name.replaceAll(" ", "-"),
         commanderName: deck.commander.name,
@@ -68,4 +68,4 @@ fetch(`${API_URL}/db`, {
     const deckLinksSource = $('#deck-links-template')[0].innerHTML;
     const deckLinksTemplate = Handlebars.compile(deckLinksSource);
     $('#deck-links-holder').append(deckLinksTemplate(data));
-});
+}, "mtg");
