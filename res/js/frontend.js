@@ -80,7 +80,8 @@ dbApiCallWithBackup({
                 name: 0
             }
         }
-    })
+    }),
+    timeout: 1000
 }, (data) => {
     $('#resume-iframe').attr('src', data.documents[0].value);
 }, "resume")

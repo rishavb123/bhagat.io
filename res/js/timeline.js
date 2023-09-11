@@ -32,7 +32,8 @@ dbApiCallWithBackup({
                 media: 1,
             }
         }
-    })
+    }),
+    timeout: 3000
 }, (data) => {
     const timelineJSON = {
         events: data.documents.map((doc) => ({

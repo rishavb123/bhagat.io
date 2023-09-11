@@ -58,7 +58,8 @@ function loadProjects() {
                     lastUpdated: 1
                 }
             }
-        })
+        }),
+        timeout: 3000
     }, (data) => {
         data = data.documents.map((d) => {
             const copy = { ...d };

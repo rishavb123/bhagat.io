@@ -23,7 +23,8 @@ dbApiCallWithBackup({
                 description: 1
             }
         }
-    })
+    }),
+    timeout: 3000
 }, (data) => {
     if (!isTouchDevice) {
         const n = data.count;
