@@ -1,7 +1,7 @@
 let errorOccured = false;
 
 function apiCall(path, options, dataHandler, errorHandler = () => { }) {
-    if (errorOccured) {
+    if (errorOccured || true) {
         errorHandler();
     }
     else {
